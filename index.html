@@ -4,18 +4,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Shop fresh groceries at Blessed Hands Grocery in Malaa. Order online for collection or delivery.">
-<title>Blessed Hands Grocery | Malaa</title>
+<meta name="description" content="Buy fresh onions, potatoes, tomatoes, cabbages and garlic at Blessed Hands Grocery, Malaa. Order online for delivery or collection.">
+<title>Blessed Hands Grocery | Fresh Produce in Malaa</title>
 
 <style>
 :root {
-  --green: #236b43;
-  --dark: #17452e;
-  --light: #edf6ed;
-  --cream: #fbfaf5;
-  --text: #26342b;
-  --muted: #68756b;
-  --white: #ffffff;
+  --green: #216b43;
+  --dark: #17482f;
+  --light: #eaf4e9;
+  --cream: #fbfaf6;
+  --text: #25342a;
+  --muted: #68766d;
+  --white: #fff;
 }
 
 * { box-sizing: border-box; }
@@ -31,8 +31,6 @@ body {
 
 button, input, select { font: inherit; }
 
-a { text-decoration: none; }
-
 .topbar {
   background: var(--dark);
   color: white;
@@ -46,7 +44,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
-  box-shadow: 0 2px 10px #0000000b;
+  box-shadow: 0 2px 12px #0000000c;
 }
 
 nav {
@@ -60,29 +58,42 @@ nav {
 }
 
 .logo {
-  font-size: 20px;
-  font-weight: bold;
   color: var(--green);
+  font-size: 19px;
+  font-weight: 800;
 }
 
-nav a { color: var(--green); font-weight: bold; }
+.navlinks {
+  display: flex;
+  gap: 22px;
+}
 
-.navlinks { display: flex; gap: 22px; }
+.navlinks a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
 
-.cart-button, .primary {
+button { cursor: pointer; }
+
+.primary, .cart-button {
   background: var(--green);
   color: white;
   border: none;
+  padding: 12px 19px;
   border-radius: 25px;
-  padding: 12px 20px;
-  cursor: pointer;
   font-weight: bold;
+}
+
+.primary:hover, .cart-button:hover {
+  background: var(--dark);
 }
 
 .hero {
   max-width: 1150px;
   margin: auto;
-  padding: 65px 22px;
+  padding: 60px 22px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -90,19 +101,18 @@ nav a { color: var(--green); font-weight: bold; }
 }
 
 .tag {
-  background: #e2f0e2;
+  background: var(--light);
   color: var(--green);
-  display: inline-block;
-  padding: 8px 15px;
+  padding: 8px 14px;
   border-radius: 20px;
   font-size: 12px;
   font-weight: bold;
 }
 
 .hero h1 {
-  font-size: clamp(38px, 5vw, 62px);
+  font-size: clamp(38px, 5vw, 60px);
   line-height: 1.08;
-  margin: 20px 0;
+  margin: 22px 0;
 }
 
 .hero h1 span { color: var(--green); }
@@ -110,35 +120,39 @@ nav a { color: var(--green); font-weight: bold; }
 .hero p {
   color: var(--muted);
   line-height: 1.8;
-}
-
-.hero-image {
-  min-height: 330px;
-  background: linear-gradient(135deg, #dcefdc, #f7edcf);
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 90px;
-  flex-wrap: wrap;
-  padding: 25px;
-  text-align: center;
+  max-width: 500px;
 }
 
 .hero-actions {
   display: flex;
   gap: 12px;
-  margin-top: 25px;
   flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.hero-actions a {
+  text-decoration: none;
 }
 
 .secondary {
-  background: white;
-  border: 1px solid #cbdacb;
   color: var(--green);
-  padding: 12px 20px;
+  background: white;
+  border: 1px solid #cadacb;
+  padding: 12px 19px;
   border-radius: 25px;
   font-weight: bold;
+}
+
+.hero-photo {
+  height: 370px;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 section {
@@ -147,14 +161,18 @@ section {
   padding: 35px 22px;
 }
 
-.section-heading { margin-bottom: 25px; }
+.section-heading {
+  margin-bottom: 25px;
+}
 
 .section-heading h2 {
   font-size: 30px;
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 
-.section-heading p { color: var(--muted); }
+.section-heading p {
+  color: var(--muted);
+}
 
 .products {
   display: grid;
@@ -164,25 +182,41 @@ section {
 
 .product {
   background: white;
-  padding: 16px;
-  border-radius: 20px;
   border: 1px solid #e6ebe5;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px #00000008;
 }
 
 .product-image {
-  height: 145px;
+  height: 175px;
   background: var(--light);
-  border-radius: 15px;
-  display: grid;
-  place-items: center;
-  font-size: 65px;
+  overflow: hidden;
 }
 
-.product h3 { margin-bottom: 5px; }
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s;
+}
+
+.product:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-details {
+  padding: 16px;
+}
+
+.product h3 {
+  margin: 0 0 7px;
+}
 
 .product p {
-  color: var(--muted);
   font-size: 13px;
+  color: var(--muted);
 }
 
 .price {
@@ -190,29 +224,32 @@ section {
   font-weight: bold;
 }
 
+.product-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
 .add-button {
-  border: none;
   background: var(--light);
   color: var(--green);
+  border: none;
+  padding: 9px 13px;
   border-radius: 20px;
-  padding: 10px 15px;
-  cursor: pointer;
   font-weight: bold;
 }
 
-.product-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-top: 15px;
+.add-button:hover {
+  background: #d6ead6;
 }
 
 .features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap: 16px;
 }
 
 .feature {
@@ -224,10 +261,20 @@ section {
 
 .feature-icon { font-size: 30px; }
 
-.feature p { color: var(--muted); }
+.feature p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.location {
+  background: white;
+  border-left: 5px solid var(--green);
+  padding: 22px;
+  border-radius: 12px;
+}
 
 .order-area {
-  background: #eaf4e9;
+  background: var(--light);
   border-radius: 25px;
   padding: 25px;
   display: grid;
@@ -237,8 +284,8 @@ section {
 
 .order-box {
   background: white;
-  padding: 20px;
   border-radius: 18px;
+  padding: 22px;
 }
 
 .order-box label {
@@ -248,42 +295,40 @@ section {
   margin: 14px 0 6px;
 }
 
-.order-box input, .order-box select {
+.order-box input,
+.order-box select {
   width: 100%;
   padding: 12px;
-  border: 1px solid #dce4dc;
+  border: 1px solid #dce5dc;
   border-radius: 9px;
   background: white;
 }
-
-.cart-items { margin: 15px 0; }
 
 .cart-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   border-bottom: 1px solid #eee;
   padding: 10px 0;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .quantity-controls button {
   background: var(--light);
   color: var(--green);
   border: none;
+  padding: 5px 9px;
   border-radius: 5px;
-  padding: 4px 9px;
-  cursor: pointer;
   margin-left: 4px;
 }
 
 .total {
   display: flex;
   justify-content: space-between;
-  font-weight: bold;
   padding: 15px 0;
   border-top: 1px solid #eee;
+  font-weight: bold;
 }
 
 .full-button {
@@ -291,17 +336,10 @@ section {
   margin-top: 15px;
 }
 
-.small-note {
-  color: var(--muted);
+.note {
   font-size: 12px;
+  color: var(--muted);
   line-height: 1.6;
-}
-
-.location {
-  background: white;
-  border-left: 5px solid var(--green);
-  padding: 20px;
-  border-radius: 12px;
 }
 
 footer {
@@ -320,20 +358,21 @@ footer {
   gap: 20px;
 }
 
-footer p { color: #c8ddcd; }
+footer p { color: #c9dfce; }
 
 @media(max-width: 800px) {
   .hero, .order-area { grid-template-columns: 1fr; }
   .products { grid-template-columns: repeat(2, 1fr); }
   .features { grid-template-columns: 1fr; }
   .navlinks { display: none; }
+  .hero-photo { height: 280px; }
 }
 
 @media(max-width: 450px) {
   .products { gap: 10px; }
-  .product { padding: 10px; }
-  .product-image { height: 110px; }
-  .product-bottom { flex-direction: column; align-items: flex-start; }
+  .product-image { height: 120px; }
+  .product-details { padding: 11px; }
+  .product-bottom { align-items: flex-start; }
 }
 </style>
 </head>
@@ -341,17 +380,20 @@ footer p { color: #c8ddcd; }
 <body>
 
 <div class="topbar">
-Fresh groceries • Fair prices • Convenient shopping in Malaa
+Fresh groceries • Fair prices • Delivery and collection available
 </div>
 
 <header>
 <nav>
   <div class="logo">🧺 Blessed Hands Grocery</div>
+
   <div class="navlinks">
     <a href="#home">Home</a>
     <a href="#shop">Shop</a>
-    <a href="#location">Our Location</a>
+    <a href="#location">Location</a>
+    <a href="#order">Order</a>
   </div>
+
   <button class="cart-button" onclick="goToOrder()">
     Basket (<span id="cart-count">0</span>)
   </button>
@@ -362,82 +404,112 @@ Fresh groceries • Fair prices • Convenient shopping in Malaa
 
 <div class="hero" id="home">
   <div>
-    <span class="tag">YOUR NEIGHBOURHOOD GROCERY SHOP</span>
+    <span class="tag">WELCOME TO BLESSED HANDS GROCERY</span>
+
     <h1>Fresh groceries.<br><span>Happy homes.</span></h1>
+
     <p>
-      Welcome to Blessed Hands Grocery!
-      Shop your everyday fresh produce at fair prices.
-      Order online and choose convenient store collection
-      or delivery.
+      Your trusted neighbourhood grocery shop in Malaa.
+      Shop fresh onions, potatoes, tomatoes, cabbages
+      and more at fair prices.
     </p>
+
     <div class="hero-actions">
-      <a class="primary" href="#shop">Shop Now</a>
-      <a class="secondary" href="#location">Find Our Store</a>
+      <a href="#shop" class="primary">Shop Now</a>
+      <a href="#location" class="secondary">Find Our Store</a>
     </div>
   </div>
 
-  <div class="hero-image">
-    🧅 🥔 🍅 🥬 🧄
+  <div class="hero-photo">
+    <img
+      src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=900&auto=format&fit=crop&q=85"
+      alt="Fresh vegetables and groceries"
+      onerror="this.style.display='none'">
   </div>
 </div>
 
 <section id="shop">
   <div class="section-heading">
-    <h2>Our Fresh Groceries</h2>
-    <p>Select your products and add them to your shopping basket.</p>
+    <h2>Shop Fresh Groceries</h2>
+    <p>Choose your favourite products and add them to your basket.</p>
   </div>
 
   <div class="products">
 
-    <div class="product">
-      <div class="product-image">🧅</div>
-      <h3>Fresh Onions</h3>
-      <p>Price per kilogram</p>
-      <div class="product-bottom">
-        <span class="price">KSh 80/kg</span>
-        <button class="add-button" onclick="addToCart('Onions',80,'kg')">Add +</button>
+    <article class="product">
+      <div class="product-image">
+        <img src="potatoes.jpg"
+        alt="Fresh potatoes" loading="lazy">
       </div>
-    </div>
+      <div class="product-details">
+        <h3>Fresh Potatoes</h3>
+        <p>Sold per kilogram</p>
+        <div class="product-bottom">
+          <span class="price">KSh 80/kg</span>
+          <button class="add-button" onclick="addToCart('Potatoes',80,'kg')">Add +</button>
+        </div>
+      </div>
+    </article>
 
-    <div class="product">
-      <div class="product-image">🥔</div>
-      <h3>Fresh Potatoes</h3>
-      <p>Price per kilogram</p>
-      <div class="product-bottom">
-        <span class="price">KSh 80/kg</span>
-        <button class="add-button" onclick="addToCart('Potatoes',80,'kg')">Add +</button>
+    <article class="product">
+      <div class="product-image">
+        <img src="onions.jpg"
+        alt="Fresh red onions" loading="lazy">
       </div>
-    </div>
+      <div class="product-details">
+        <h3>Fresh Onions</h3>
+        <p>Sold per kilogram</p>
+        <div class="product-bottom">
+          <span class="price">KSh 80/kg</span>
+          <button class="add-button" onclick="addToCart('Onions',80,'kg')">Add +</button>
+        </div>
+      </div>
+    </article>
 
-    <div class="product">
-      <div class="product-image">🍅</div>
-      <h3>Fresh Tomatoes</h3>
-      <p>Price per kilogram</p>
-      <div class="product-bottom">
-        <span class="price">KSh 120/kg</span>
-        <button class="add-button" onclick="addToCart('Tomatoes',120,'kg')">Add +</button>
+    <article class="product">
+      <div class="product-image">
+        <img src="tomatoes.jpg"
+        alt="Fresh tomatoes" loading="lazy">
       </div>
-    </div>
+      <div class="product-details">
+        <h3>Fresh Tomatoes</h3>
+        <p>Sold per kilogram</p>
+        <div class="product-bottom">
+          <span class="price">KSh 120/kg</span>
+          <button class="add-button" onclick="addToCart('Tomatoes',120,'kg')">Add +</button>
+        </div>
+      </div>
+    </article>
 
-    <div class="product">
-      <div class="product-image">🥬</div>
-      <h3>Fresh Cabbage</h3>
-      <p>Price per piece</p>
-      <div class="product-bottom">
-        <span class="price">KSh 90 each</span>
-        <button class="add-button" onclick="addToCart('Cabbage',90,'piece')">Add +</button>
+    <article class="product">
+      <div class="product-image">
+        <img src="cabbages.jpg"
+        alt="Fresh green cabbage" loading="lazy">
       </div>
-    </div>
+      <div class="product-details">
+        <h3>Fresh Cabbage</h3>
+        <p>Sold per piece</p>
+        <div class="product-bottom">
+          <span class="price">KSh 90 each</span>
+          <button class="add-button" onclick="addToCart('Cabbage',90,'piece')">Add +</button>
+        </div>
+      </div>
+    </article>
 
-    <div class="product">
-      <div class="product-image">🧄</div>
-      <h3>Garlic</h3>
-      <p>Price confirmed on request</p>
-      <div class="product-bottom">
-        <span class="price">Ask for price</span>
-        <button class="add-button" onclick="addToCart('Garlic',null,'item')">Ask price</button>
+    <article class="product">
+      <div class="product-image">
+        <img src="garlic.jpg"
+        alt="Fresh garlic" loading="lazy">
       </div>
-    </div>
+      <div class="product-details">
+        <h3>Fresh Garlic</h3>
+        <p>Price confirmed on request</p>
+        <div class="product-bottom">
+          <span class="price">Ask for price</span>
+          <button class="add-button" onclick="addToCart('Garlic',null,'item')">Add +</button>
+        </div>
+      </div>
+    </article>
 
   </div>
 </section>
@@ -445,24 +517,26 @@ Fresh groceries • Fair prices • Convenient shopping in Malaa
 <section>
   <div class="section-heading">
     <h2>Why Shop With Us?</h2>
-    <p>We make grocery shopping simple and convenient.</p>
+    <p>Convenient grocery shopping for your household.</p>
   </div>
 
   <div class="features">
     <div class="feature">
-      <div class="feature-icon">🥕</div>
+      <div class="feature-icon">🥬</div>
       <h3>Fresh Produce</h3>
-      <p>Everyday grocery essentials for your household.</p>
+      <p>Shop your everyday grocery essentials.</p>
     </div>
+
     <div class="feature">
       <div class="feature-icon">🛵</div>
-      <h3>Convenient Delivery</h3>
-      <p>Delivery available in Malaa, Joska, Kamulu and nearby areas.</p>
+      <h3>Home Delivery</h3>
+      <p>We serve Malaa, Joska, Kamulu and nearby estates.</p>
     </div>
+
     <div class="feature">
       <div class="feature-icon">🛍️</div>
       <h3>Store Collection</h3>
-      <p>Order online and collect your groceries from our store.</p>
+      <p>Order online and collect from our Malaa shop.</p>
     </div>
   </div>
 </section>
@@ -477,31 +551,30 @@ Fresh groceries • Fair prices • Convenient shopping in Malaa
     <h3>📍 Blessed Hands Grocery</h3>
     <p><strong>Location:</strong> Malaa, 300 metres behind Waecon Supermarket.</p>
     <p><strong>WhatsApp:</strong> 0794 725 287</p>
-    <p><strong>Services:</strong> Store collection and delivery.</p>
+    <p><strong>Services:</strong> Delivery and store collection.</p>
   </div>
 </section>
 
 <section id="order">
   <div class="order-area">
+
     <div>
       <span class="tag">EASY ONLINE ORDERING</span>
-      <h2>Order Your Groceries</h2>
+      <h2>Place Your Grocery Order</h2>
       <p>
-        Add products to your basket, provide your details
-        and send your order directly to us through WhatsApp.
+        Add your groceries to the basket and send your order
+        directly to us on WhatsApp.
       </p>
       <p>
-        We will confirm product availability, payment
-        arrangements and delivery charges.
+        Choose delivery or collection from our Malaa store.
+        We will confirm availability and delivery charges.
       </p>
     </div>
 
     <div class="order-box">
-      <h3>🛒 Your Shopping Basket</h3>
+      <h3>🛒 Your Basket</h3>
 
-      <div id="cart-items" class="cart-items">
-        Your basket is empty.
-      </div>
+      <div id="cart-items">Your basket is empty.</div>
 
       <div class="total">
         <span>Estimated total</span>
@@ -511,29 +584,31 @@ Fresh groceries • Fair prices • Convenient shopping in Malaa
       <label for="customer-name">Your name</label>
       <input id="customer-name" placeholder="Enter your name">
 
-      <label for="phone">Your phone number</label>
-      <input id="phone" type="tel" placeholder="Enter your phone number">
+      <label for="customer-phone">Your phone number</label>
+      <input id="customer-phone" type="tel" placeholder="Enter phone number">
 
-      <label for="order-type">How would you like to receive your order?</label>
+      <label for="order-type">Order preference</label>
       <select id="order-type" onchange="toggleDelivery()">
-        <option value="Collection">Collect from our store</option>
-        <option value="Delivery">Home delivery</option>
+        <option value="Store collection">Collect from our store</option>
+        <option value="Home delivery">Home delivery</option>
       </select>
 
       <div id="delivery-field" style="display:none">
-        <label for="delivery-location">Delivery location / estate</label>
-        <input id="delivery-location" placeholder="e.g. Joska, Kamulu, Malaa">
+        <label for="delivery-location">Delivery location</label>
+        <input id="delivery-location" placeholder="Enter estate or area">
       </div>
 
-      <button class="primary full-button" onclick="sendWhatsAppOrder()">
-        Send Order via WhatsApp
+      <button class="primary full-button" onclick="sendOrder()">
+        Send Order on WhatsApp
       </button>
 
-      <p class="small-note">
-        Delivery charges are confirmed according to distance.
-        Prices and availability are confirmed when we receive your order.
+      <p class="note">
+        Delivery charges depend on distance.
+        Garlic prices and product availability are confirmed
+        when you place your order.
       </p>
     </div>
+
   </div>
 </section>
 
@@ -545,11 +620,13 @@ Fresh groceries • Fair prices • Convenient shopping in Malaa
     <h3>🧺 Blessed Hands Grocery</h3>
     <p>Fresh groceries. Fair prices. Happy homes.</p>
   </div>
+
   <div>
     <h3>Contact Us</h3>
     <p>WhatsApp: 0794 725 287</p>
     <p>Malaa, Kenya</p>
   </div>
+
   <div>
     <p>© <span id="year"></span> Blessed Hands Grocery</p>
     <p>Thank you for shopping with us!</p>
@@ -562,12 +639,17 @@ const whatsappNumber = "254794725287";
 let cart = [];
 
 function addToCart(name,price,unit) {
-  const item = cart.find(product => product.name === name);
+  const existing = cart.find(item => item.name === name);
 
-  if(item) {
-    item.quantity++;
+  if(existing) {
+    existing.quantity++;
   } else {
-    cart.push({name,price,unit,quantity:1});
+    cart.push({
+      name,
+      price,
+      unit,
+      quantity: 1
+    });
   }
 
   updateCart();
@@ -584,18 +666,18 @@ function changeQuantity(index,amount) {
 }
 
 function updateCart() {
-  const cartItems = document.getElementById("cart-items");
+  const container = document.getElementById("cart-items");
   const count = cart.reduce((sum,item) => sum + item.quantity,0);
 
   document.getElementById("cart-count").textContent = count;
 
   if(cart.length === 0) {
-    cartItems.textContent = "Your basket is empty.";
+    container.textContent = "Your basket is empty.";
     document.getElementById("cart-total").textContent = "KSh 0";
     return;
   }
 
-  cartItems.innerHTML = "";
+  container.innerHTML = "";
 
   cart.forEach((item,index) => {
     const row = document.createElement("div");
@@ -603,7 +685,7 @@ function updateCart() {
 
     const description = document.createElement("span");
     description.textContent =
-      `${item.name} — ${item.quantity} ${item.unit}`;
+      item.name + " — " + item.quantity + " " + item.unit;
 
     const controls = document.createElement("span");
     controls.className = "quantity-controls";
@@ -618,40 +700,41 @@ function updateCart() {
 
     controls.append(minus,plus);
     row.append(description,controls);
-    cartItems.append(row);
+    container.append(row);
   });
 
   const total = cart.reduce(
     (sum,item) => sum + (item.price || 0) * item.quantity,0
   );
 
-  const hasUnpriced = cart.some(item => item.price === null);
+  const unpriced = cart.some(item => item.price === null);
 
   document.getElementById("cart-total").textContent =
     "KSh " + total.toLocaleString("en-KE") +
-    (hasUnpriced ? " + price to confirm" : "");
+    (unpriced ? " + price to confirm" : "");
 }
 
 function toggleDelivery() {
   const type = document.getElementById("order-type").value;
+
   document.getElementById("delivery-field").style.display =
-    type === "Delivery" ? "block" : "none";
+    type === "Home delivery" ? "block" : "none";
 }
 
 function goToOrder() {
   document.getElementById("order").scrollIntoView({
-    behavior:"smooth"
+    behavior: "smooth"
   });
 }
 
-function sendWhatsAppOrder() {
+function sendOrder() {
   if(cart.length === 0) {
-    alert("Please add products to your basket first.");
+    alert("Please add products to your basket.");
     return;
   }
 
   const name = document.getElementById("customer-name").value.trim();
-  const phone = document.getElementById("phone").value.trim();
+  const phone = document.getElementById("customer-phone").value.trim();
   const type = document.getElementById("order-type").value;
   const location = document.getElementById("delivery-location").value.trim();
 
@@ -660,17 +743,17 @@ function sendWhatsAppOrder() {
     return;
   }
 
-  if(type === "Delivery" && !location) {
+  if(type === "Home delivery" && !location) {
     alert("Please enter your delivery location.");
     return;
   }
 
-  const orderLines = cart.map(item => {
-    const amount = item.price === null
+  const lines = cart.map(item => {
+    const subtotal = item.price === null
       ? "Price to be confirmed"
       : "KSh " + (item.price * item.quantity).toLocaleString("en-KE");
 
-    return `- ${item.name}: ${item.quantity} ${item.unit} (${amount})`;
+    return `- ${item.name}: ${item.quantity} ${item.unit} (${subtotal})`;
   });
 
   const total = cart.reduce(
@@ -684,23 +767,23 @@ I would like to place an order.
 
 Customer: ${name}
 Phone: ${phone}
-Order type: ${type}
-${type === "Delivery" ? "Delivery location: " + location : "Collection point: Malaa store"}
+Order preference: ${type}
+${type === "Home delivery" ? "Delivery area: " + location : "Collection: Malaa store"}
 
 MY ORDER:
-${orderLines.join("\n")}
+${lines.join("\n")}
 
-Estimated total: KSh ${total.toLocaleString("en-KE")}${cart.some(item => item.price === null) ? " (excluding unpriced items)" : ""}
+Estimated total: KSh ${total.toLocaleString("en-KE")}
 
-Please confirm availability and any delivery charges.
+Please confirm availability and delivery charges.
 
 Thank you!`;
 
-  window.open(
-    "https://wa.me/" + whatsappNumber + "?text=" +
-    encodeURIComponent(message),
-    "_blank"
-  );
+  const url =
+    "https://wa.me/" + whatsappNumber +
+    "?text=" + encodeURIComponent(message);
+
+  window.open(url,"_blank");
 }
 
 document.getElementById("year").textContent =
