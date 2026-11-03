@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,18 +18,14 @@
 }
 
 * { box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: var(--cream);
   color: var(--text);
 }
-
 button, input, select { font: inherit; }
-
 .topbar {
   background: var(--dark);
   color: white;
@@ -38,7 +33,6 @@ button, input, select { font: inherit; }
   padding: 10px;
   font-size: 13px;
 }
-
 header {
   background: white;
   position: sticky;
@@ -46,7 +40,6 @@ header {
   z-index: 10;
   box-shadow: 0 2px 12px #0000000c;
 }
-
 nav {
   max-width: 1150px;
   margin: auto;
@@ -56,27 +49,22 @@ nav {
   justify-content: space-between;
   gap: 15px;
 }
-
 .logo {
   color: var(--green);
   font-size: 19px;
   font-weight: 800;
 }
-
 .navlinks {
   display: flex;
   gap: 22px;
 }
-
 .navlinks a {
   color: var(--text);
   text-decoration: none;
   font-size: 14px;
   font-weight: bold;
 }
-
 button { cursor: pointer; }
-
 .primary, .cart-button {
   background: var(--green);
   color: white;
@@ -85,11 +73,9 @@ button { cursor: pointer; }
   border-radius: 25px;
   font-weight: bold;
 }
-
 .primary:hover, .cart-button:hover {
   background: var(--dark);
 }
-
 .hero {
   max-width: 1150px;
   margin: auto;
@@ -99,7 +85,6 @@ button { cursor: pointer; }
   align-items: center;
   gap: 35px;
 }
-
 .tag {
   background: var(--light);
   color: var(--green);
@@ -108,32 +93,24 @@ button { cursor: pointer; }
   font-size: 12px;
   font-weight: bold;
 }
-
 .hero h1 {
   font-size: clamp(38px, 5vw, 60px);
   line-height: 1.08;
   margin: 22px 0;
 }
-
 .hero h1 span { color: var(--green); }
-
 .hero p {
   color: var(--muted);
   line-height: 1.8;
   max-width: 500px;
 }
-
 .hero-actions {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
   margin-top: 25px;
 }
-
-.hero-actions a {
-  text-decoration: none;
-}
-
+.hero-actions a { text-decoration: none; }
 .secondary {
   color: var(--green);
   background: white;
@@ -142,44 +119,32 @@ button { cursor: pointer; }
   border-radius: 25px;
   font-weight: bold;
 }
-
 .hero-photo {
   height: 370px;
   border-radius: 25px;
   overflow: hidden;
 }
-
 .hero-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 section {
   max-width: 1150px;
   margin: auto;
   padding: 35px 22px;
 }
-
-.section-heading {
-  margin-bottom: 25px;
-}
-
+.section-heading { margin-bottom: 25px; }
 .section-heading h2 {
   font-size: 30px;
   margin-bottom: 7px;
 }
-
-.section-heading p {
-  color: var(--muted);
-}
-
+.section-heading p { color: var(--muted); }
 .products {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
 }
-
 .product {
   background: white;
   border: 1px solid #e6ebe5;
@@ -187,13 +152,11 @@ section {
   overflow: hidden;
   box-shadow: 0 5px 18px #00000008;
 }
-
 .product-image {
   height: 175px;
   background: var(--light);
   overflow: hidden;
 }
-
 .product-image img {
   width: 100%;
   height: 100%;
@@ -201,29 +164,19 @@ section {
   display: block;
   transition: transform .3s;
 }
-
 .product:hover .product-image img {
   transform: scale(1.05);
 }
-
-.product-details {
-  padding: 16px;
-}
-
-.product h3 {
-  margin: 0 0 7px;
-}
-
+.product-details { padding: 16px; }
+.product h3 { margin: 0 0 7px; }
 .product p {
   font-size: 13px;
   color: var(--muted);
 }
-
 .price {
   color: var(--green);
   font-weight: bold;
 }
-
 .product-bottom {
   display: flex;
   align-items: center;
@@ -232,7 +185,6 @@ section {
   margin-top: 15px;
   flex-wrap: wrap;
 }
-
 .add-button {
   background: var(--light);
   color: var(--green);
@@ -241,38 +193,29 @@ section {
   border-radius: 20px;
   font-weight: bold;
 }
-
-.add-button:hover {
-  background: #d6ead6;
-}
-
+.add-button:hover { background: #d6ead6; }
 .features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
-
 .feature {
   background: white;
   padding: 22px;
   border-radius: 18px;
   border: 1px solid #e6ebe5;
 }
-
 .feature-icon { font-size: 30px; }
-
 .feature p {
   color: var(--muted);
   line-height: 1.6;
 }
-
 .location {
   background: white;
   border-left: 5px solid var(--green);
   padding: 22px;
   border-radius: 12px;
 }
-
 .order-area {
   background: var(--light);
   border-radius: 25px;
@@ -281,20 +224,17 @@ section {
   grid-template-columns: 1fr 1fr;
   gap: 25px;
 }
-
 .order-box {
   background: white;
   border-radius: 18px;
   padding: 22px;
 }
-
 .order-box label {
   display: block;
   font-weight: bold;
   font-size: 13px;
   margin: 14px 0 6px;
 }
-
 .order-box input,
 .order-box select {
   width: 100%;
@@ -303,7 +243,6 @@ section {
   border-radius: 9px;
   background: white;
 }
-
 .cart-row {
   display: flex;
   justify-content: space-between;
@@ -313,7 +252,6 @@ section {
   padding: 10px 0;
   font-size: 13px;
 }
-
 .quantity-controls button {
   background: var(--light);
   color: var(--green);
@@ -322,33 +260,66 @@ section {
   border-radius: 5px;
   margin-left: 4px;
 }
-
 .total {
   display: flex;
   justify-content: space-between;
-  padding: 15px 0;
+  padding: 10px 0;
   border-top: 1px solid #eee;
   font-weight: bold;
 }
-
+.payment-box {
+  margin-top: 18px;
+  padding: 16px;
+  background: #f7fbf6;
+  border: 1px solid #dce9dc;
+  border-radius: 12px;
+}
+.payment-box h4 {
+  margin: 0 0 8px;
+  color: var(--dark);
+}
+.payment-box p {
+  margin: 7px 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.payment-number {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--green);
+}
+.fee-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 0;
+  font-size: 13px;
+}
+.secondary-button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 11px 14px;
+  border: 1px solid var(--green);
+  border-radius: 22px;
+  background: white;
+  color: var(--green);
+  font-weight: bold;
+}
 .full-button {
   width: 100%;
   margin-top: 15px;
 }
-
 .note {
   font-size: 12px;
   color: var(--muted);
   line-height: 1.6;
 }
-
 footer {
   background: var(--dark);
   color: white;
   padding: 35px 22px;
   margin-top: 45px;
 }
-
 .footer-content {
   max-width: 1100px;
   margin: auto;
@@ -357,7 +328,6 @@ footer {
   flex-wrap: wrap;
   gap: 20px;
 }
-
 footer p { color: #c9dfce; }
 
 @media(max-width: 800px) {
@@ -367,7 +337,6 @@ footer p { color: #c9dfce; }
   .navlinks { display: none; }
   .hero-photo { height: 280px; }
 }
-
 @media(max-width: 450px) {
   .products { gap: 10px; }
   .product-image { height: 120px; }
@@ -405,9 +374,7 @@ Fresh groceries • Fair prices • Delivery and collection available
 <div class="hero" id="home">
   <div>
     <span class="tag">WELCOME TO BLESSED HANDS GROCERY</span>
-
     <h1>Fresh groceries.<br><span>Happy homes.</span></h1>
-
     <p>
       Your trusted neighbourhood grocery shop in Malaa.
       Shop fresh onions, potatoes, tomatoes, cabbages
@@ -421,8 +388,7 @@ Fresh groceries • Fair prices • Delivery and collection available
   </div>
 
   <div class="hero-photo">
-    <img
-      src="freshproduce.jpg"
+    <img src="freshproduce.jpg"
       alt="Fresh vegetables and groceries"
       onerror="this.style.display='none'">
   </div>
@@ -438,8 +404,7 @@ Fresh groceries • Fair prices • Delivery and collection available
 
     <article class="product">
       <div class="product-image">
-        <img src="potatoes.jpg"
-        alt="Fresh potatoes" loading="lazy">
+        <img src="potatoes.jpg" alt="Fresh potatoes" loading="lazy">
       </div>
       <div class="product-details">
         <h3>Fresh Potatoes</h3>
@@ -453,8 +418,7 @@ Fresh groceries • Fair prices • Delivery and collection available
 
     <article class="product">
       <div class="product-image">
-        <img src="onions.jpg"
-        alt="Fresh red onions" loading="lazy">
+        <img src="onions.jpg" alt="Fresh red onions" loading="lazy">
       </div>
       <div class="product-details">
         <h3>Fresh Onions</h3>
@@ -468,8 +432,7 @@ Fresh groceries • Fair prices • Delivery and collection available
 
     <article class="product">
       <div class="product-image">
-        <img src="tomatoes.jpg"
-        alt="Fresh tomatoes" loading="lazy">
+        <img src="tomatoes.jpg" alt="Fresh tomatoes" loading="lazy">
       </div>
       <div class="product-details">
         <h3>Fresh Tomatoes</h3>
@@ -483,8 +446,7 @@ Fresh groceries • Fair prices • Delivery and collection available
 
     <article class="product">
       <div class="product-image">
-        <img src="cabbages.jpg"
-        alt="Fresh green cabbage" loading="lazy">
+        <img src="cabbages.jpg" alt="Fresh green cabbage" loading="lazy">
       </div>
       <div class="product-details">
         <h3>Fresh Cabbage</h3>
@@ -498,8 +460,7 @@ Fresh groceries • Fair prices • Delivery and collection available
 
     <article class="product">
       <div class="product-image">
-        <img src="garlic.jpg"
-        alt="Fresh garlic" loading="lazy">
+        <img src="garlic.jpg" alt="Fresh garlic" loading="lazy">
       </div>
       <div class="product-details">
         <h3>Fresh Garlic</h3>
@@ -567,7 +528,7 @@ Fresh groceries • Fair prices • Delivery and collection available
       </p>
       <p>
         Choose delivery or collection from our Malaa store.
-        We will confirm availability and delivery charges.
+        Delivery fees are calculated by area.
       </p>
     </div>
 
@@ -575,6 +536,16 @@ Fresh groceries • Fair prices • Delivery and collection available
       <h3>🛒 Your Basket</h3>
 
       <div id="cart-items">Your basket is empty.</div>
+
+      <div class="fee-row">
+        <span>Products subtotal</span>
+        <span id="products-total">KSh 0</span>
+      </div>
+
+      <div class="fee-row" id="delivery-fee-row" style="display:none">
+        <span>Delivery fee</span>
+        <span id="delivery-fee">KSh 0</span>
+      </div>
 
       <div class="total">
         <span>Estimated total</span>
@@ -594,18 +565,44 @@ Fresh groceries • Fair prices • Delivery and collection available
       </select>
 
       <div id="delivery-field" style="display:none">
-        <label for="delivery-location">Delivery location</label>
-        <input id="delivery-location" placeholder="Enter estate or area">
+        <label for="delivery-location">Choose your delivery area</label>
+        <select id="delivery-location" onchange="updateCart()">
+          <option value="">Select your area</option>
+          <option value="Malaa">Malaa & environs — KSh 100</option>
+          <option value="Kware">Kware & environs — KSh 150</option>
+          <option value="Joska">Joska & environs — KSh 170</option>
+        </select>
+
+        <label for="delivery-address">Estate, street or delivery instructions</label>
+        <input id="delivery-address" placeholder="Enter your specific location">
+      </div>
+
+      <div class="payment-box">
+        <h4>Pay via M-Pesa Pochi la Biashara</h4>
+        <p>Pay to this number after we confirm your order total:</p>
+        <div class="payment-number">0794 725 287</div>
+        <p>
+          Open M-Pesa → Pochi la Biashara → Send Money,
+          then enter the number above and the confirmed amount.
+        </p>
+        <p>
+          <strong>Important:</strong> Garlic prices and availability
+          must be confirmed before you pay if garlic is in your basket.
+        </p>
       </div>
 
       <button class="primary full-button" onclick="sendOrder()">
-        Send Order on WhatsApp
+        Send Order & Payment Instructions on WhatsApp
+      </button>
+
+      <button class="secondary-button" onclick="sendPaymentConfirmation()">
+        Send M-Pesa Confirmation on WhatsApp
       </button>
 
       <p class="note">
-        Delivery charges depend on distance.
-        Garlic prices and product availability are confirmed
-        when you place your order.
+        After paying, use the confirmation button and paste or forward
+        your M-Pesa transaction SMS in WhatsApp.
+        Your order is confirmed only after payment is checked.
       </p>
     </div>
 
@@ -673,6 +670,11 @@ function updateCart() {
 
   if(cart.length === 0) {
     container.textContent = "Your basket is empty.";
+    document.getElementById("products-total").textContent = "KSh 0";
+    document.getElementById("delivery-fee-row").style.display =
+      document.getElementById("order-type").value === "Home delivery"
+        ? "flex" : "none";
+    document.getElementById("delivery-fee").textContent = "KSh 0";
     document.getElementById("cart-total").textContent = "KSh 0";
     return;
   }
@@ -708,10 +710,31 @@ function updateCart() {
   );
 
   const unpriced = cart.some(item => item.price === null);
+  const type = document.getElementById("order-type").value;
+  const fee = type === "Home delivery" ? getDeliveryFee() : 0;
+
+  document.getElementById("products-total").textContent =
+    "KSh " + total.toLocaleString("en-KE");
+
+  document.getElementById("delivery-fee-row").style.display =
+    type === "Home delivery" ? "flex" : "none";
+
+  document.getElementById("delivery-fee").textContent =
+    fee === null ? "Select area" : "KSh " + fee.toLocaleString("en-KE");
 
   document.getElementById("cart-total").textContent =
-    "KSh " + total.toLocaleString("en-KE") +
+    "KSh " + (total + (fee || 0)).toLocaleString("en-KE") +
     (unpriced ? " + price to confirm" : "");
+}
+
+function getDeliveryFee() {
+  const area = document.getElementById("delivery-location").value;
+  const fees = {
+    Malaa: 100,
+    Kware: 150,
+    Joska: 170
+  };
+  return fees[area] ?? null;
 }
 
 function toggleDelivery() {
@@ -719,6 +742,8 @@ function toggleDelivery() {
 
   document.getElementById("delivery-field").style.display =
     type === "Home delivery" ? "block" : "none";
+
+  updateCart();
 }
 
 function goToOrder() {
@@ -736,15 +761,21 @@ function sendOrder() {
   const name = document.getElementById("customer-name").value.trim();
   const phone = document.getElementById("customer-phone").value.trim();
   const type = document.getElementById("order-type").value;
-  const location = document.getElementById("delivery-location").value.trim();
+  const area = document.getElementById("delivery-location").value;
+  const address = document.getElementById("delivery-address").value.trim();
 
   if(!name || !phone) {
     alert("Please enter your name and phone number.");
     return;
   }
 
-  if(type === "Home delivery" && !location) {
-    alert("Please enter your delivery location.");
+  if(type === "Home delivery" && !area) {
+    alert("Please select Malaa, Kware or Joska as your delivery area.");
+    return;
+  }
+
+  if(type === "Home delivery" && !address) {
+    alert("Please enter your estate, street or delivery instructions.");
     return;
   }
 
@@ -756,9 +787,13 @@ function sendOrder() {
     return `- ${item.name}: ${item.quantity} ${item.unit} (${subtotal})`;
   });
 
-  const total = cart.reduce(
+  const productsTotal = cart.reduce(
     (sum,item) => sum + (item.price || 0) * item.quantity,0
   );
+
+  const unpriced = cart.some(item => item.price === null);
+  const deliveryFee = type === "Home delivery" ? getDeliveryFee() : 0;
+  const grandTotal = productsTotal + deliveryFee;
 
   const message =
 `Hello Blessed Hands Grocery!
@@ -768,14 +803,55 @@ I would like to place an order.
 Customer: ${name}
 Phone: ${phone}
 Order preference: ${type}
-${type === "Home delivery" ? "Delivery area: " + location : "Collection: Malaa store"}
+${type === "Home delivery"
+  ? `Delivery area: ${area} & environs
+Delivery address/instructions: ${address}
+Delivery fee: KSh ${deliveryFee}`
+  : "Collection: Malaa store"}
 
 MY ORDER:
 ${lines.join("\n")}
 
-Estimated total: KSh ${total.toLocaleString("en-KE")}
+Products subtotal: KSh ${productsTotal.toLocaleString("en-KE")}
+Delivery fee: KSh ${deliveryFee.toLocaleString("en-KE")}
+${unpriced
+  ? `Estimated amount before unpriced items: KSh ${grandTotal.toLocaleString("en-KE")} — PLEASE CONFIRM FINAL TOTAL BEFORE PAYMENT.`
+  : `TOTAL TO PAY: KSh ${grandTotal.toLocaleString("en-KE")}`}
 
-Please confirm availability and delivery charges.
+M-Pesa payment method: Pochi la Biashara
+Payment number: 0794725287
+Please confirm the order and final amount. I will send my M-Pesa transaction confirmation on WhatsApp after payment.
+
+Thank you!`;
+
+  const url =
+    "https://wa.me/" + whatsappNumber +
+    "?text=" + encodeURIComponent(message);
+
+  window.open(url,"_blank");
+}
+
+function sendPaymentConfirmation() {
+  const name = document.getElementById("customer-name").value.trim();
+  const phone = document.getElementById("customer-phone").value.trim();
+
+  if(!name || !phone) {
+    alert("Please enter your name and phone number first.");
+    return;
+  }
+
+  const message =
+`Hello Blessed Hands Grocery,
+
+I have made payment for my order.
+
+Customer name: ${name}
+My phone number: ${phone}
+
+M-Pesa transaction confirmation:
+[Please paste or forward the full M-Pesa confirmation SMS here.]
+
+Kindly verify my payment and confirm my order.
 
 Thank you!`;
 
@@ -788,6 +864,7 @@ Thank you!`;
 
 document.getElementById("year").textContent =
   new Date().getFullYear();
+
 </script>
 
 </body>
