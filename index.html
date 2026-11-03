@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Shop fresh groceries at Blessed Hands Grocery in Malaa. Order online for delivery or collection.">
+<meta name="description" content="Blessed Hands Grocery in Malaa — fresh vegetables, fruits and everyday groceries with local delivery.">
 <meta name="theme-color" content="#17482f">
 <title>Blessed Hands Grocery | Fresh Produce in Malaa</title>
 
@@ -20,17 +20,18 @@
   --shadow:0 12px 35px #173d2510;
 }
 
-* { box-sizing:border-box; }
-html { scroll-behavior:smooth; }
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
 body {
   margin:0;
   font-family:Arial,sans-serif;
   background:var(--cream);
   color:var(--text);
 }
-button,input,select,textarea { font:inherit; }
-button { cursor:pointer; }
-a { color:inherit; }
+
+button,input,select,textarea {font:inherit}
+button {cursor:pointer}
+a {color:inherit}
 
 .topbar {
   background:var(--dark);
@@ -67,7 +68,8 @@ nav {
 
 .navlinks {
   display:flex;
-  gap:20px;
+  gap:18px;
+  flex-wrap:wrap;
 }
 
 .navlinks a {
@@ -76,7 +78,7 @@ nav {
   font-weight:bold;
 }
 
-.navlinks a:hover { color:var(--green); }
+.navlinks a:hover {color:var(--green)}
 
 .nav-actions {
   display:flex;
@@ -101,7 +103,7 @@ nav {
   color:#fff;
 }
 
-.btn-primary:hover { background:var(--dark); }
+.btn-primary:hover {background:var(--dark)}
 
 .btn-outline {
   background:#fff;
@@ -128,7 +130,7 @@ nav {
 
 .hero {
   padding-top:55px;
-  padding-bottom:55px;
+  padding-bottom:45px;
   display:grid;
   grid-template-columns:1.05fr .95fr;
   align-items:center;
@@ -151,7 +153,7 @@ nav {
   margin:20px 0;
 }
 
-.hero h1 span { color:var(--green); }
+.hero h1 span {color:var(--green)}
 
 .hero p {
   color:var(--muted);
@@ -225,6 +227,29 @@ nav {
   color:var(--muted);
 }
 
+.category-tabs {
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:18px;
+}
+
+.category-tabs button {
+  border:1px solid #cadacb;
+  background:#fff;
+  color:var(--green);
+  border-radius:20px;
+  padding:8px 13px;
+  font-size:13px;
+  font-weight:bold;
+}
+
+.category-tabs button.active {
+  background:var(--green);
+  color:#fff;
+  border-color:var(--green);
+}
+
 .products {
   display:grid;
   grid-template-columns:repeat(4,1fr);
@@ -253,11 +278,11 @@ nav {
   transition:transform .3s;
 }
 
-.product:hover img { transform:scale(1.05); }
+.product:hover img {transform:scale(1.05)}
 
-.product-details { padding:16px; }
+.product-details {padding:16px}
 
-.product h3 { margin:0 0 7px; }
+.product h3 {margin:0 0 7px}
 
 .product p {
   font-size:13px;
@@ -292,7 +317,7 @@ nav {
   border-radius:17px;
 }
 
-.feature-icon { font-size:28px; }
+.feature-icon {font-size:28px}
 
 .feature p,.location-card p {
   color:var(--muted);
@@ -308,9 +333,9 @@ nav {
   padding:22px;
 }
 
-.order-intro { padding:18px; }
+.order-intro {padding:18px}
 
-.order-intro h2 { font-size:30px; }
+.order-intro h2 {font-size:30px}
 
 .order-intro p {
   color:var(--muted);
@@ -324,7 +349,7 @@ nav {
   box-shadow:var(--shadow);
 }
 
-.panel h3 { margin-top:0; }
+.panel h3 {margin-top:0}
 
 .cart-empty {
   color:var(--muted);
@@ -351,6 +376,7 @@ nav {
   display:flex;
   align-items:center;
   gap:5px;
+  white-space:nowrap;
 }
 
 .qty button {
@@ -377,7 +403,7 @@ nav {
   padding-top:14px;
 }
 
-.field { margin-top:13px; }
+.field {margin-top:13px}
 
 .field label {
   display:block;
@@ -431,8 +457,6 @@ nav {
   line-height:1.6;
 }
 
-.location-card { border-left:5px solid var(--green); }
-
 .delivery-rates {
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -480,16 +504,10 @@ nav {
   font-weight:bold;
 }
 
-.admin-link {
-  font-size:12px;
-  color:#d4e5d8;
-  text-decoration:underline;
-}
+.admin-area {display:none}
+.admin-area.active {display:block}
 
-.admin-area { display:none; }
-.admin-area.active { display:block; }
-
-.admin-table-wrap { overflow-x:auto; }
+.admin-table-wrap {overflow-x:auto}
 
 .admin-table {
   width:100%;
@@ -504,7 +522,7 @@ nav {
   vertical-align:top;
 }
 
-.admin-table th { background:#f7faf6; }
+.admin-table th {background:#f7faf6}
 
 .admin-table select {
   padding:7px;
@@ -529,6 +547,38 @@ nav {
   margin-bottom:16px;
 }
 
+.terms {
+  background:#fff;
+  border:1px solid var(--line);
+  padding:22px;
+  border-radius:17px;
+}
+
+.terms h3 {
+  font-size:16px;
+  margin:18px 0 6px;
+}
+
+.terms p {
+  font-size:14px;
+  line-height:1.7;
+  color:var(--muted);
+  margin:6px 0;
+}
+
+.accept-terms {
+  display:flex!important;
+  align-items:flex-start;
+  gap:10px;
+  font-weight:normal!important;
+  line-height:1.5;
+}
+
+.accept-terms input {
+  width:auto!important;
+  margin-top:3px;
+}
+
 footer {
   background:var(--dark);
   color:#fff;
@@ -545,30 +595,36 @@ footer {
   gap:20px;
 }
 
-footer p { color:#c9dfce; }
+footer p {color:#c9dfce}
 
-.hidden { display:none!important; }
+.admin-link {
+  font-size:12px;
+  color:#d4e5d8;
+  text-decoration:underline;
+}
+
+.hidden {display:none!important}
 
 @media(max-width:850px) {
-  .hero,.order-layout { grid-template-columns:1fr; }
-  .products { grid-template-columns:repeat(2,1fr); }
-  .navlinks { display:none; }
-  .hero-photo { height:290px; }
-  .feature-grid { grid-template-columns:1fr; }
-  .trust-strip { grid-template-columns:1fr; }
-  .delivery-rates { grid-template-columns:1fr; }
+  .hero,.order-layout {grid-template-columns:1fr}
+  .products {grid-template-columns:repeat(2,1fr)}
+  .navlinks {display:none}
+  .hero-photo {height:290px}
+  .feature-grid {grid-template-columns:1fr}
+  .trust-strip {grid-template-columns:1fr}
+  .delivery-rates {grid-template-columns:1fr}
 }
 
 @media(max-width:480px) {
-  .products { gap:10px; }
-  .product-image { height:125px; }
-  .product-details { padding:11px; }
-  .product-bottom { align-items:flex-start; }
+  .products {gap:10px}
+  .product-image {height:125px}
+  .product-details {padding:11px}
+  .product-bottom {align-items:flex-start}
   .section-head {
     align-items:flex-start;
     flex-direction:column;
   }
-  .logo { font-size:16px; }
+  .logo {font-size:16px}
   .nav-actions .btn {
     padding:10px 12px;
     font-size:12px;
@@ -591,6 +647,7 @@ footer p { color:#c9dfce; }
     <a href="#home">Home</a>
     <a href="#shop">Shop</a>
     <a href="#delivery">Delivery</a>
+    <a href="#terms">Terms</a>
     <a href="#tracking">Track Order</a>
     <a href="#order">Checkout</a>
   </div>
@@ -612,9 +669,8 @@ footer p { color:#c9dfce; }
 
     <p>
       Your trusted neighbourhood grocery shop in Malaa.
-      Shop fresh onions, potatoes, tomatoes, cabbages and more
-      at fair prices. Order online for convenient delivery or
-      collect from our store.
+      Shop fresh vegetables, fruits and everyday essentials at fair prices.
+      Order online for convenient delivery or collect from our store.
     </p>
 
     <div class="hero-actions">
@@ -640,88 +696,26 @@ footer p { color:#c9dfce; }
   <div class="section-head">
     <div>
       <h2>Shop Fresh Groceries</h2>
-      <p>Choose your favourite products and add them to your basket.</p>
+      <p>Browse our products and add your favourites to your basket.</p>
     </div>
   </div>
 
-  <div class="products">
-
-    <article class="product">
-      <div class="product-image">
-        <img src="potatoes.jpg" alt="Fresh potatoes" loading="lazy">
-      </div>
-      <div class="product-details">
-        <h3>Fresh Potatoes</h3>
-        <p>Sold per kilogram</p>
-        <div class="product-bottom">
-          <span class="price">KSh 80/kg</span>
-          <button class="btn btn-soft btn-small"
-                  onclick="addToCart('Potatoes',80,'kg')">Add +</button>
-        </div>
-      </div>
-    </article>
-
-    <article class="product">
-      <div class="product-image">
-        <img src="onions.jpg" alt="Fresh red onions" loading="lazy">
-      </div>
-      <div class="product-details">
-        <h3>Fresh Onions</h3>
-        <p>Sold per kilogram</p>
-        <div class="product-bottom">
-          <span class="price">KSh 80/kg</span>
-          <button class="btn btn-soft btn-small"
-                  onclick="addToCart('Onions',80,'kg')">Add +</button>
-        </div>
-      </div>
-    </article>
-
-    <article class="product">
-      <div class="product-image">
-        <img src="tomatoes.jpg" alt="Fresh tomatoes" loading="lazy">
-      </div>
-      <div class="product-details">
-        <h3>Fresh Tomatoes</h3>
-        <p>Sold per kilogram</p>
-        <div class="product-bottom">
-          <span class="price">KSh 120/kg</span>
-          <button class="btn btn-soft btn-small"
-                  onclick="addToCart('Tomatoes',120,'kg')">Add +</button>
-        </div>
-      </div>
-    </article>
-
-    <article class="product">
-      <div class="product-image">
-        <img src="cabbages.jpg" alt="Fresh green cabbage" loading="lazy">
-      </div>
-      <div class="product-details">
-        <h3>Fresh Cabbage</h3>
-        <p>Sold per piece</p>
-        <div class="product-bottom">
-          <span class="price">KSh 90 each</span>
-          <button class="btn btn-soft btn-small"
-                  onclick="addToCart('Cabbage',90,'piece')">Add +</button>
-        </div>
-      </div>
-    </article>
-
-    <article class="product">
-      <div class="product-image">
-        <img src="garlic.jpg" alt="Fresh garlic" loading="lazy">
-      </div>
-      <div class="product-details">
-        <h3>Fresh Garlic</h3>
-        <p>Price confirmed on request</p>
-        <div class="product-bottom">
-          <span class="price">Ask for price</span>
-          <button class="btn btn-soft btn-small"
-                  onclick="addToCart('Garlic',null,'item')">Add +</button>
-        </div>
-      </div>
-    </article>
-
+  <div class="category-tabs" id="category-tabs">
+    <button class="active" data-category="All">All products</button>
+    <button data-category="Vegetables">Vegetables</button>
+    <button data-category="Herbs & Spices">Herbs & spices</button>
+    <button data-category="Fruits">Fruits</button>
+    <button data-category="Greens">Greens</button>
+    <button data-category="Other Essentials">Other essentials</button>
   </div>
+
+  <div class="products" id="product-grid"></div>
+
+  <p class="note">
+    Prices for newly added products are marked “Price on request”
+    until you confirm your selling prices. Product images should be
+    saved as JPG files in the same folder as this HTML file.
+  </p>
 </section>
 
 <section class="section container">
@@ -762,20 +756,9 @@ footer p { color:#c9dfce; }
   </div>
 
   <div class="delivery-rates">
-    <div class="rate">
-      Malaa & environs
-      <strong>KSh 100</strong>
-    </div>
-
-    <div class="rate">
-      Kware & environs
-      <strong>KSh 150</strong>
-    </div>
-
-    <div class="rate">
-      Joska & environs
-      <strong>KSh 170</strong>
-    </div>
+    <div class="rate">Malaa & environs<strong>KSh 100</strong></div>
+    <div class="rate">Kware & environs<strong>KSh 150</strong></div>
+    <div class="rate">Joska & environs<strong>KSh 170</strong></div>
   </div>
 </section>
 
@@ -789,130 +772,189 @@ footer p { color:#c9dfce; }
 </section>
 
 <section class="section container" id="order">
-  <div class="order-layout">
+<div class="order-layout">
 
-    <div class="order-intro">
-      <span class="tag">EASY ONLINE ORDERING</span>
-      <h2>Place Your Grocery Order</h2>
+  <div class="order-intro">
+    <span class="tag">EASY ONLINE ORDERING</span>
+    <h2>Place Your Grocery Order</h2>
 
-      <p>
-        Add products to your basket, select delivery or collection,
-        and send your order to us on WhatsApp.
-      </p>
+    <p>
+      Add products to your basket, select delivery or collection,
+      and send your order to us on WhatsApp.
+    </p>
 
-      <p>
-        We will confirm product availability and the final amount
-        before you make payment.
-      </p>
+    <p>
+      We will confirm product availability and any prices marked
+      “Price on request” before you pay.
+    </p>
 
-      <p><strong>Store collection:</strong> No delivery fee.</p>
+    <p><strong>Store collection:</strong> No delivery fee.</p>
+  </div>
+
+  <div class="panel">
+    <h3>🛒 Your Basket</h3>
+
+    <div id="cart-items" class="cart-empty">
+      Your basket is empty.
     </div>
 
-    <div class="panel">
-      <h3>🛒 Your Basket</h3>
+    <div class="summary-line">
+      <span>Products subtotal</span>
+      <strong id="products-total">KSh 0</strong>
+    </div>
 
-      <div id="cart-items" class="cart-empty">
-        Your basket is empty.
-      </div>
+    <div class="summary-line" id="delivery-fee-row" style="display:none">
+      <span>Delivery fee</span>
+      <strong id="delivery-fee">Select area</strong>
+    </div>
 
-      <div class="summary-line">
-        <span>Products subtotal</span>
-        <strong id="products-total">KSh 0</strong>
-      </div>
+    <div class="summary-line summary-total">
+      <span>Estimated total</span>
+      <strong id="cart-total">KSh 0</strong>
+    </div>
 
-      <div class="summary-line" id="delivery-fee-row" style="display:none">
-        <span>Delivery fee</span>
-        <strong id="delivery-fee">Select area</strong>
-      </div>
+    <div class="field">
+      <label for="customer-name">Your full name</label>
+      <input id="customer-name" autocomplete="name" placeholder="Enter your name">
+    </div>
 
-      <div class="summary-line summary-total">
-        <span>Estimated total</span>
-        <strong id="cart-total">KSh 0</strong>
-      </div>
+    <div class="field">
+      <label for="customer-phone">Your phone number</label>
+      <input id="customer-phone" type="tel" autocomplete="tel" placeholder="e.g. 07XXXXXXXX">
+    </div>
 
+    <div class="field">
+      <label for="order-type">Order preference</label>
+      <select id="order-type" onchange="toggleDelivery()">
+        <option value="Store collection">Collect from our store</option>
+        <option value="Home delivery">Home delivery</option>
+      </select>
+    </div>
+
+    <div id="delivery-field" class="hidden">
       <div class="field">
-        <label for="customer-name">Your full name</label>
-        <input id="customer-name"
-               autocomplete="name"
-               placeholder="Enter your name">
-      </div>
-
-      <div class="field">
-        <label for="customer-phone">Your phone number</label>
-        <input id="customer-phone"
-               type="tel"
-               autocomplete="tel"
-               placeholder="e.g. 07XXXXXXXX">
-      </div>
-
-      <div class="field">
-        <label for="order-type">Order preference</label>
-        <select id="order-type" onchange="toggleDelivery()">
-          <option value="Store collection">Collect from our store</option>
-          <option value="Home delivery">Home delivery</option>
+        <label for="delivery-location">Delivery area</label>
+        <select id="delivery-location" onchange="updateCart()">
+          <option value="">Select your area</option>
+          <option value="Malaa">Malaa & environs — KSh 100</option>
+          <option value="Kware">Kware & environs — KSh 150</option>
+          <option value="Joska">Joska & environs — KSh 170</option>
         </select>
       </div>
 
-      <div id="delivery-field" class="hidden">
-
-        <div class="field">
-          <label for="delivery-location">Delivery area</label>
-          <select id="delivery-location" onchange="updateCart()">
-            <option value="">Select your area</option>
-            <option value="Malaa">Malaa & environs — KSh 100</option>
-            <option value="Kware">Kware & environs — KSh 150</option>
-            <option value="Joska">Joska & environs — KSh 170</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="delivery-address">Estate, village or delivery instructions</label>
-          <textarea id="delivery-address"
-                    placeholder="Enter your estate, landmark or directions"></textarea>
-        </div>
-
+      <div class="field">
+        <label for="delivery-address">Estate, village or delivery instructions</label>
+        <textarea id="delivery-address" placeholder="Enter your estate, landmark or directions"></textarea>
       </div>
+    </div>
 
-      <div class="payment-box">
-        <h4>💚 Pay via M-Pesa Pochi la Biashara</h4>
+    <div class="payment-box">
+      <h4>💚 Pay via M-Pesa Pochi la Biashara</h4>
+      <p>After we confirm your order and final amount, pay using Pochi la Biashara:</p>
+      <div class="payment-number">0794 725 287</div>
 
-        <p>
-          After we confirm your order and final amount,
-          pay using Pochi la Biashara:
-        </p>
-
-        <div class="payment-number">0794 725 287</div>
-
-        <button class="btn btn-outline btn-small"
-                type="button"
-                onclick="copyPayNumber()">
-          Copy payment number
-        </button>
-
-        <p>
-          Open M-Pesa → Pochi la Biashara → Send Money.
-          Enter the number and the confirmed amount.
-        </p>
-
-        <p>
-          <strong>Keep your M-Pesa confirmation SMS.</strong>
-          You will be able to send it to us through WhatsApp.
-        </p>
-      </div>
-
-      <button class="btn btn-primary"
-              style="width:100%;margin-top:16px"
-              onclick="placeOrder()">
-        Place Order on WhatsApp
+      <button class="btn btn-outline btn-small" type="button" onclick="copyPayNumber()">
+        Copy payment number
       </button>
 
-      <p class="note">
-        Garlic prices and availability are confirmed when you order.
-        If garlic is in your basket, please wait for us to confirm
-        the final total before paying.
+      <p>
+        Open M-Pesa → Pochi la Biashara → Send Money.
+        Enter the number and the confirmed amount.
       </p>
 
+      <p>
+        <strong>Keep your M-Pesa confirmation SMS.</strong>
+        You can send your transaction confirmation to us on WhatsApp.
+      </p>
     </div>
+
+    <div class="field">
+      <label class="accept-terms">
+        <input type="checkbox" id="terms-accepted">
+        <span>
+          I have read and agree to the
+          <a href="#terms" style="color:#216b43">Terms and Conditions</a>,
+          including the no-return policy for change of mind.
+        </span>
+      </label>
+    </div>
+
+    <button class="btn btn-primary" style="width:100%;margin-top:16px" onclick="placeOrder()">
+      Place Order on WhatsApp
+    </button>
+
+    <p class="note">
+      Estimated totals may change if your basket contains products
+      whose prices need confirmation. We will confirm the final amount
+      before payment.
+    </p>
+  </div>
+</div>
+</section>
+
+<section class="section container" id="terms">
+  <div class="section-head">
+    <div>
+      <h2>Terms and Conditions</h2>
+      <p>Please read these terms before placing an order.</p>
+    </div>
+  </div>
+
+  <div class="terms">
+
+    <h3>1. No returns for change of mind</h3>
+    <p>
+      All sales are final for change-of-mind requests.
+      Goods cannot be returned or exchanged simply because
+      a customer changes their mind after delivery or collection.
+    </p>
+
+    <h3>2. Damaged, spoiled, defective or incorrect goods</h3>
+    <p>
+      If you receive goods that are damaged, spoiled, defective
+      or different from what you ordered, contact us promptly
+      on WhatsApp at 0794 725 287.
+      We will review the complaint and handle it in accordance
+      with applicable consumer protection laws.
+      Nothing in this policy removes rights that cannot legally be excluded.
+    </p>
+
+    <h3>3. Product prices and availability</h3>
+    <p>
+      Prices and availability are subject to confirmation.
+      Products marked “Price on request” will be priced and
+      confirmed with you before payment.
+      Please do not pay until we confirm your final order total.
+    </p>
+
+    <h3>4. Delivery fees</h3>
+    <p>
+      Delivery fees are Malaa and environs: KSh 100;
+      Kware and environs: KSh 150;
+      Joska and environs: KSh 170.
+      Store collection has no delivery fee.
+      Please provide accurate delivery details.
+    </p>
+
+    <h3>5. Payments</h3>
+    <p>
+      Payments are made through M-Pesa Pochi la Biashara
+      at 0794 725 287, after the order and final amount
+      have been confirmed. Keep your M-Pesa transaction confirmation.
+    </p>
+
+    <h3>6. Order confirmation</h3>
+    <p>
+      Submitting an order request on WhatsApp does not by itself
+      guarantee product availability. We will confirm the order details with you.
+    </p>
+
+    <h3>7. Contact and complaints</h3>
+    <p>
+      For questions, order changes or complaints, contact
+      Blessed Hands Grocery on WhatsApp at 0794 725 287.
+    </p>
+
   </div>
 </section>
 
@@ -927,24 +969,18 @@ footer p { color:#c9dfce; }
   <div class="tracking-box">
     <div class="field" style="margin-top:0">
       <label for="tracking-ref">Order reference</label>
-      <input id="tracking-ref"
-             placeholder="e.g. BHG-20261103-1234">
+      <input id="tracking-ref" placeholder="e.g. BHG-20261103-1234">
     </div>
 
-    <button class="btn btn-primary"
-            style="margin-top:12px"
-            onclick="trackOrder()">
+    <button class="btn btn-primary" style="margin-top:12px" onclick="trackOrder()">
       Check order status
     </button>
 
-    <div class="tracking-result"
-         id="tracking-result"
-         aria-live="polite">
-    </div>
+    <div class="tracking-result" id="tracking-result" aria-live="polite"></div>
 
     <p class="note">
       This demo stores orders in this browser only.
-      On a live multi-device website, order tracking needs a connected database.
+      Live multi-device tracking requires a connected database and secure backend.
     </p>
   </div>
 </section>
@@ -955,7 +991,7 @@ footer p { color:#c9dfce; }
   <div class="section-head">
     <div>
       <h2>Store Admin Dashboard</h2>
-      <p>Review orders, confirm payments and update fulfilment status.</p>
+      <p>Review orders and update payment and fulfilment status.</p>
     </div>
 
     <button class="btn btn-outline btn-small" onclick="closeAdmin()">
@@ -965,19 +1001,15 @@ footer p { color:#c9dfce; }
 
   <div class="admin-notice">
     <strong>Prototype notice:</strong>
-    This dashboard currently uses this browser's local storage and has no
-    secure login. It is not private or suitable for real customer data
-    until connected to a secure backend with administrator authentication.
+    This dashboard uses this browser's local storage and has no secure login.
+    Orders will not appear on other devices. Payment status is manually updated,
+    not verified directly by M-Pesa. Do not use this as a production admin
+    system until it has secure authentication and a backend.
   </div>
 
   <div class="admin-tools">
-    <button class="btn btn-outline btn-small" onclick="renderAdmin()">
-      Refresh orders
-    </button>
-
-    <button class="btn btn-outline btn-small" onclick="exportOrders()">
-      Export orders CSV
-    </button>
+    <button class="btn btn-outline btn-small" onclick="renderAdmin()">Refresh orders</button>
+    <button class="btn btn-outline btn-small" onclick="exportOrders()">Export orders CSV</button>
   </div>
 
   <div class="admin-table-wrap">
@@ -991,11 +1023,8 @@ footer p { color:#c9dfce; }
           <th>Order status</th>
         </tr>
       </thead>
-
       <tbody id="admin-orders">
-        <tr>
-          <td colspan="5">No orders saved in this browser yet.</td>
-        </tr>
+        <tr><td colspan="5">No orders saved in this browser yet.</td></tr>
       </tbody>
     </table>
   </div>
@@ -1003,7 +1032,6 @@ footer p { color:#c9dfce; }
 
 <footer>
   <div class="footer-content">
-
     <div>
       <h3>🧺 Blessed Hands Grocery</h3>
       <p>Fresh groceries. Fair prices. Happy homes.</p>
@@ -1018,11 +1046,8 @@ footer p { color:#c9dfce; }
     <div>
       <p>© <span id="year"></span> Blessed Hands Grocery</p>
       <p>Thank you for shopping with us!</p>
-      <a class="admin-link" href="#admin" onclick="openAdmin()">
-        Store administration
-      </a>
+      <a class="admin-link" href="#admin" onclick="openAdmin()">Store administration</a>
     </div>
-
   </div>
 </footer>
 
@@ -1036,22 +1061,263 @@ const DELIVERY_FEES = {
   Joska:170
 };
 
+// EDIT PRODUCT PRICES IN THIS LIST.
+// Use min:null,max:null for products whose prices are not yet confirmed.
+// Garlic is priced between KSh 15 and KSh 25 per piece.
+
+const products = [
+  {
+    name:"Potatoes",
+    category:"Vegetables",
+    unit:"kg",
+    min:80,
+    max:80,
+    image:"potatoes.jpg",
+    description:"Fresh potatoes"
+  },
+  {
+    name:"Onions",
+    category:"Vegetables",
+    unit:"kg",
+    min:80,
+    max:80,
+    image:"onions.jpg",
+    description:"Fresh onions"
+  },
+  {
+    name:"Tomatoes",
+    category:"Vegetables",
+    unit:"kg",
+    min:120,
+    max:120,
+    image:"tomatoes.jpg",
+    description:"Fresh tomatoes"
+  },
+  {
+    name:"Cabbage",
+    category:"Vegetables",
+    unit:"piece",
+    min:90,
+    max:90,
+    image:"cabbages.jpg",
+    description:"Fresh cabbage"
+  },
+  {
+    name:"Capsicum",
+    category:"Vegetables",
+    unit:"kg",
+    min:null,
+    max:null,
+    image:"capsicum.jpg",
+    description:"Green, red or yellow capsicum"
+  },
+  {
+    name:"Butternut",
+    category:"Vegetables",
+    unit:"piece",
+    min:null,
+    max:null,
+    image:"butternut.jpg",
+    description:"Fresh butternut squash"
+  },
+  {
+    name:"Carrots",
+    category:"Vegetables",
+    unit:"kg",
+    min:null,
+    max:null,
+    image:"carrots.jpg",
+    description:"Fresh carrots"
+  },
+  {
+    name:"Broccoli",
+    category:"Vegetables",
+    unit:"head",
+    min:null,
+    max:null,
+    image:"broccoli.jpg",
+    description:"Fresh broccoli"
+  },
+  {
+    name:"Garlic",
+    category:"Herbs & Spices",
+    unit:"piece",
+    min:15,
+    max:25,
+    image:"garlic.jpg",
+    description:"KSh 15–25 per piece"
+  },
+  {
+    name:"Ginger",
+    category:"Herbs & Spices",
+    unit:"kg",
+    min:null,
+    max:null,
+    image:"ginger.jpg",
+    description:"Fresh ginger"
+  },
+  {
+    name:"Dhania",
+    category:"Herbs & Spices",
+    unit:"bunch",
+    min:null,
+    max:null,
+    image:"dhania.jpg",
+    description:"Fresh coriander leaves"
+  },
+  {
+    name:"Apples",
+    category:"Fruits",
+    unit:"piece",
+    min:null,
+    max:null,
+    image:"apples.jpg",
+    description:"Fresh apples"
+  },
+  {
+    name:"Oranges",
+    category:"Fruits",
+    unit:"piece",
+    min:null,
+    max:null,
+    image:"oranges.jpg",
+    description:"Juicy oranges"
+  },
+  {
+    name:"Mangoes",
+    category:"Fruits",
+    unit:"piece",
+    min:null,
+    max:null,
+    image:"mangoes.jpg",
+    description:"Ripe mangoes"
+  },
+  {
+    name:"Watermelon",
+    category:"Fruits",
+    unit:"piece",
+    min:null,
+    max:null,
+    image:"watermelon.jpg",
+    description:"Whole watermelon"
+  },
+  {
+    name:"Bananas",
+    category:"Fruits",
+    unit:"bunch",
+    min:null,
+    max:null,
+    image:"bananas.jpg",
+    description:"Fresh bananas"
+  },
+  {
+    name:"Avocados",
+    category:"Fruits",
+    unit:"piece",
+    min:null,
+    max:null,
+    image:"avocados.jpg",
+    description:"Fresh avocados"
+  }
+];
+
 let cart = [];
+let activeCategory = "All";
 
 function money(amount) {
   return "KSh " + Number(amount || 0).toLocaleString("en-KE");
 }
 
-function addToCart(name,price,unit) {
-  const existing = cart.find(item => item.name === name);
+function productPrice(product) {
+  if(product.min === null || product.max === null) {
+    return "Price on request";
+  }
+
+  if(product.min === product.max) {
+    return `${money(product.min)} / ${product.unit}`;
+  }
+
+  return `${money(product.min)}–${money(product.max)} / ${product.unit}`;
+}
+
+function renderProducts() {
+  const grid = document.getElementById("product-grid");
+  grid.innerHTML = "";
+
+  const list = products.filter(product =>
+    activeCategory === "All" || product.category === activeCategory
+  );
+
+  list.forEach(product => {
+    const card = document.createElement("article");
+    card.className = "product";
+
+    const photo = document.createElement("div");
+    photo.className = "product-image";
+
+    const img = document.createElement("img");
+    img.src = product.image;
+    img.alt = product.name;
+    img.loading = "lazy";
+
+    img.onerror = function() {
+      this.style.display = "none";
+    };
+
+    photo.append(img);
+
+    const details = document.createElement("div");
+    details.className = "product-details";
+
+    const title = document.createElement("h3");
+    title.textContent = product.name;
+
+    const desc = document.createElement("p");
+    desc.textContent = product.description + " • Sold per " + product.unit;
+
+    const bottom = document.createElement("div");
+    bottom.className = "product-bottom";
+
+    const price = document.createElement("span");
+    price.className = "price";
+    price.textContent = productPrice(product);
+
+    const btn = document.createElement("button");
+    btn.className = "btn btn-soft btn-small";
+    btn.textContent = "Add +";
+    btn.onclick = () => addToCart(product);
+
+    bottom.append(price,btn);
+    details.append(title,desc,bottom);
+    card.append(photo,details);
+    grid.append(card);
+  });
+}
+
+document.getElementById("category-tabs").addEventListener("click",event => {
+  const btn = event.target.closest("button[data-category]");
+  if(!btn) return;
+
+  activeCategory = btn.dataset.category;
+
+  document.querySelectorAll("#category-tabs button").forEach(button => {
+    button.classList.toggle("active",button === btn);
+  });
+
+  renderProducts();
+});
+
+function addToCart(product) {
+  const existing = cart.find(item => item.name === product.name);
 
   if(existing) {
     existing.quantity++;
   } else {
     cart.push({
-      name,
-      price,
-      unit,
+      name:product.name,
+      unit:product.unit,
+      min:product.min,
+      max:product.max,
       quantity:1
     });
   }
@@ -1077,8 +1343,32 @@ function getDeliveryFee() {
     : null;
 }
 
+function cartTotals() {
+  let min = 0;
+  let max = 0;
+  let unpriced = false;
+  let hasRange = false;
+
+  cart.forEach(item => {
+    if(item.min === null || item.max === null) {
+      unpriced = true;
+      return;
+    }
+
+    min += item.min * item.quantity;
+    max += item.max * item.quantity;
+
+    if(item.min !== item.max) {
+      hasRange = true;
+    }
+  });
+
+  return {min,max,unpriced,hasRange};
+}
+
 function updateCart() {
   const container = document.getElementById("cart-items");
+  container.innerHTML = "";
 
   const count = cart.reduce(
     (sum,item) => sum + item.quantity,
@@ -1087,76 +1377,79 @@ function updateCart() {
 
   document.getElementById("cart-count").textContent = count;
 
-  container.innerHTML = "";
-
   if(!cart.length) {
     container.textContent = "Your basket is empty.";
-  } else {
-
-    cart.forEach((item,index) => {
-
-      const row = document.createElement("div");
-      row.className = "cart-row";
-
-      const info = document.createElement("div");
-
-      const title = document.createElement("strong");
-      title.textContent = item.name;
-
-      const detail = document.createElement("small");
-
-      detail.textContent = item.price === null
-        ? "Price to be confirmed"
-        : money(item.price * item.quantity);
-
-      info.append(title,detail);
-
-      const qty = document.createElement("div");
-      qty.className = "qty";
-
-      const minus = document.createElement("button");
-      minus.textContent = "−";
-      minus.setAttribute("aria-label","Decrease " + item.name);
-      minus.onclick = () => changeQuantity(index,-1);
-
-      const number = document.createElement("span");
-      number.textContent = item.quantity;
-
-      const plus = document.createElement("button");
-      plus.textContent = "+";
-      plus.setAttribute("aria-label","Increase " + item.name);
-      plus.onclick = () => changeQuantity(index,1);
-
-      qty.append(minus,number,plus);
-      row.append(info,qty);
-      container.append(row);
-    });
   }
 
-  const subtotal = cart.reduce(
-    (sum,item) => sum + (item.price || 0) * item.quantity,
-    0
-  );
+  cart.forEach((item,index) => {
+    const row = document.createElement("div");
+    row.className = "cart-row";
 
-  const unpriced = cart.some(item => item.price === null);
+    const info = document.createElement("div");
 
-  const isDelivery =
+    const title = document.createElement("strong");
+    title.textContent = item.name;
+
+    const detail = document.createElement("small");
+
+    if(item.min === null || item.max === null) {
+      detail.textContent = "Price to be confirmed";
+    } else if(item.min !== item.max) {
+      detail.textContent =
+        `${money(item.min)}–${money(item.max)} each`;
+    } else {
+      detail.textContent = money(item.min * item.quantity);
+    }
+
+    info.append(title,detail);
+
+    const qty = document.createElement("div");
+    qty.className = "qty";
+
+    const minus = document.createElement("button");
+    minus.textContent = "−";
+    minus.setAttribute("aria-label","Decrease " + item.name);
+    minus.onclick = () => changeQuantity(index,-1);
+
+    const number = document.createElement("span");
+    number.textContent = item.quantity;
+
+    const plus = document.createElement("button");
+    plus.textContent = "+";
+    plus.setAttribute("aria-label","Increase " + item.name);
+    plus.onclick = () => changeQuantity(index,1);
+
+    qty.append(minus,number,plus);
+    row.append(info,qty);
+    container.append(row);
+  });
+
+  const totals = cartTotals();
+
+  const delivery =
     document.getElementById("order-type").value === "Home delivery";
 
-  const fee = isDelivery ? getDeliveryFee() : 0;
+  const fee = delivery ? getDeliveryFee() : 0;
 
   document.getElementById("products-total").textContent =
-    money(subtotal) + (unpriced ? " + price to confirm" : "");
+    totals.unpriced
+      ? "Price to be confirmed"
+      : totals.hasRange
+        ? `${money(totals.min)} – ${money(totals.max)}`
+        : money(totals.min);
 
   document.getElementById("delivery-fee-row").style.display =
-    isDelivery ? "flex" : "none";
+    delivery ? "flex" : "none";
 
   document.getElementById("delivery-fee").textContent =
     fee === null ? "Select area" : money(fee);
 
   document.getElementById("cart-total").textContent =
-    money(subtotal + (fee || 0)) +
-    (unpriced ? " + price to confirm" : "");
+    totals.unpriced
+      ? "Confirming product prices"
+      : totals.hasRange
+        ? `${money(totals.min + (fee || 0))} – ${money(totals.max + (fee || 0))}`
+        : money(totals.min + (fee || 0));
 }
 
 function toggleDelivery() {
@@ -1187,7 +1480,7 @@ function copyPayNumber() {
 function getOrders() {
   try {
     return JSON.parse(localStorage.getItem("bhg_orders") || "[]");
-  } catch(e) {
+  } catch(error) {
     return [];
   }
 }
@@ -1197,38 +1490,33 @@ function saveOrders(orders) {
 }
 
 function makeReference() {
-  const d = new Date();
+  const date = new Date();
 
-  const date =
-    d.getFullYear() +
-    String(d.getMonth()+1).padStart(2,"0") +
-    String(d.getDate()).padStart(2,"0");
+  const formattedDate =
+    date.getFullYear() +
+    String(date.getMonth()+1).padStart(2,"0") +
+    String(date.getDate()).padStart(2,"0");
 
-  return "BHG-" + date + "-" +
+  return "BHG-" + formattedDate + "-" +
     Math.floor(1000 + Math.random()*9000);
 }
 
 function placeOrder() {
-
   if(!cart.length) {
     alert("Please add products to your basket.");
     return;
   }
 
-  const name =
-    document.getElementById("customer-name").value.trim();
+  if(!document.getElementById("terms-accepted").checked) {
+    alert("Please read and accept the Terms and Conditions before placing your order.");
+    return;
+  }
 
-  const phone =
-    document.getElementById("customer-phone").value.trim();
-
-  const type =
-    document.getElementById("order-type").value;
-
-  const area =
-    document.getElementById("delivery-location").value;
-
-  const address =
-    document.getElementById("delivery-address").value.trim();
+  const name = document.getElementById("customer-name").value.trim();
+  const phone = document.getElementById("customer-phone").value.trim();
+  const type = document.getElementById("order-type").value;
+  const area = document.getElementById("delivery-location").value;
+  const address = document.getElementById("delivery-address").value.trim();
 
   if(!name || !phone) {
     alert("Please enter your name and phone number.");
@@ -1250,19 +1538,8 @@ function placeOrder() {
     return;
   }
 
-  const fee = type === "Home delivery"
-    ? getDeliveryFee()
-    : 0;
-
-  const subtotal = cart.reduce(
-    (sum,item) => sum + (item.price || 0) * item.quantity,
-    0
-  );
-
-  const unpriced = cart.some(item => item.price === null);
-
-  const total = subtotal + (fee || 0);
-
+  const fee = type === "Home delivery" ? getDeliveryFee() : 0;
+  const totals = cartTotals();
   const ref = makeReference();
 
   const order = {
@@ -1274,28 +1551,43 @@ function placeOrder() {
     area:area || "",
     address:type === "Home delivery" ? address : "Malaa store",
     items:cart.map(item => ({...item})),
-    subtotal,
+    subtotalMin:totals.min,
+    subtotalMax:totals.max,
     deliveryFee:fee || 0,
-    total,
-    unpriced,
+    unpriced:totals.unpriced,
+    hasRange:totals.hasRange,
+    totalMin:totals.min + (fee || 0),
+    totalMax:totals.max + (fee || 0),
     paymentStatus:"Awaiting payment",
     status:"Order received"
   };
 
   const orders = getOrders();
-
   orders.unshift(order);
   saveOrders(orders);
 
-  const itemLines = order.items.map(item =>
-    `- ${item.name}: ${item.quantity} ${item.unit} — ${
-      item.price === null
-        ? "Price to be confirmed"
-        : money(item.price * item.quantity)
-    }`
-  ).join("\n");
+  const itemLines = order.items.map(item => {
+    let price;
 
-  const msg =
+    if(item.min === null || item.max === null) {
+      price = "Price to be confirmed";
+    } else if(item.min === item.max) {
+      price = money(item.min * item.quantity);
+    } else {
+      price =
+        `${money(item.min * item.quantity)}–${money(item.max * item.quantity)} (range)`;
+    }
+
+    return `- ${item.name}: ${item.quantity} ${item.unit} — ${price}`;
+  }).join("\n");
+
+  const totalText = totals.unpriced
+    ? "Final amount to be confirmed"
+    : totals.hasRange
+      ? `${money(order.totalMin)} – ${money(order.totalMax)}`
+      : money(order.totalMin);
+
+  const message =
 `Hello Blessed Hands Grocery!
 
 I would like to place an order.
@@ -1315,32 +1607,22 @@ Delivery fee: ${money(fee)}`
 MY ORDER:
 ${itemLines}
 
-Products subtotal: ${money(subtotal)}
-Delivery fee: ${money(fee || 0)}
-${
-  unpriced
-    ? `Estimated amount before unpriced items: ${money(total)}. PLEASE CONFIRM THE FINAL TOTAL BEFORE PAYMENT.`
-    : `Estimated total: ${money(total)}`
-}
+Estimated total: ${totalText}
 
 Payment method: M-Pesa Pochi la Biashara
 Payment number: ${paymentNumber}
 
-Please confirm availability and the final amount.
-I will send my M-Pesa transaction confirmation on WhatsApp after payment.
+Please confirm availability and the final amount before I pay.
+I will send my M-Pesa confirmation on WhatsApp after payment.
 
 Thank you!`;
 
   document.getElementById("tracking-ref").value = ref;
 
-  alert(
-    "Your order reference is " + ref +
-    ". Keep it to track your order."
-  );
+  alert("Your order reference is " + ref + ". Keep it to track your order.");
 
   window.open(
-    "https://wa.me/" + whatsappNumber +
-    "?text=" + encodeURIComponent(msg),
+    "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message),
     "_blank"
   );
 
@@ -1349,30 +1631,28 @@ Thank you!`;
 }
 
 function trackOrder() {
-
   const ref = document.getElementById("tracking-ref")
     .value.trim().toUpperCase();
 
   const result = document.getElementById("tracking-result");
 
   result.style.display = "block";
-
-  const order = getOrders().find(
-    o => o.ref.toUpperCase() === ref
-  );
+  result.innerHTML = "";
 
   if(!ref) {
     result.textContent = "Please enter your order reference.";
     return;
   }
 
+  const order = getOrders().find(
+    item => item.ref.toUpperCase() === ref
+  );
+
   if(!order) {
     result.textContent =
       "We couldn't find that order in this browser. Please contact us on WhatsApp if you need help.";
     return;
   }
-
-  result.innerHTML = "";
 
   const heading = document.createElement("strong");
   heading.textContent = "Order " + order.ref;
@@ -1390,10 +1670,16 @@ function trackOrder() {
   payment.textContent = "Payment: " + order.paymentStatus;
 
   const amount = document.createElement("p");
+
   amount.textContent =
-    "Recorded estimated total: " +
-    money(order.total) +
-    (order.unpriced ? " (some item prices need confirmation)" : "");
+    "Estimated total: " +
+    (
+      order.unpriced
+        ? "To be confirmed"
+        : order.hasRange
+          ? `${money(order.totalMin)} – ${money(order.totalMax)}`
+          : money(order.totalMin)
+    );
 
   const date = document.createElement("p");
   date.textContent =
@@ -1421,7 +1707,6 @@ function closeAdmin() {
 }
 
 function renderAdmin() {
-
   const tbody = document.getElementById("admin-orders");
   tbody.innerHTML = "";
 
@@ -1440,54 +1725,59 @@ function renderAdmin() {
   }
 
   orders.forEach(order => {
-
     const tr = document.createElement("tr");
 
-    const orderCell = document.createElement("td");
+    const cells = [
+      document.createElement("td"),
+      document.createElement("td"),
+      document.createElement("td"),
+      document.createElement("td"),
+      document.createElement("td")
+    ];
 
-    orderCell.textContent =
+    cells[0].textContent =
       order.ref + "\n" +
       new Date(order.createdAt).toLocaleString("en-KE");
 
-    const customer = document.createElement("td");
-
-    customer.textContent =
+    cells[1].textContent =
       order.name + "\n" +
       order.phone + "\n" +
       order.type +
       (order.area ? " — " + order.area : "");
 
-    const items = document.createElement("td");
+    cells[2].textContent =
+      order.items.map(item => item.name + " × " + item.quantity).join(", ") +
+      "\n" +
+      (
+        order.unpriced
+          ? "Price to confirm"
+          : order.hasRange
+            ? `${money(order.totalMin)} – ${money(order.totalMax)}`
+            : money(order.totalMin)
+      );
 
-    items.textContent =
-      order.items.map(i => i.name + " × " + i.quantity).join(", ") +
-      "\n" + money(order.total) +
-      (order.unpriced ? " + unpriced item" : "");
-
-    const pay = document.createElement("td");
-    const paySelect = document.createElement("select");
+    const pay = document.createElement("select");
 
     [
       "Awaiting payment",
       "Payment reported",
       "Payment verified",
       "Refunded"
-    ].forEach(v => {
-      const op = document.createElement("option");
-      op.value = v;
-      op.textContent = v;
-      paySelect.append(op);
+    ].forEach(value => {
+      const option = document.createElement("option");
+      option.value = value;
+      option.textContent = value;
+      pay.append(option);
     });
 
-    paySelect.value = order.paymentStatus;
+    pay.value = order.paymentStatus;
 
-    paySelect.onchange = () =>
-      updateOrder(order.ref,"paymentStatus",paySelect.value);
+    pay.onchange = () =>
+      updateOrder(order.ref,"paymentStatus",pay.value);
 
-    pay.append(paySelect);
+    cells[3].append(pay);
 
-    const status = document.createElement("td");
-    const statusSelect = document.createElement("select");
+    const status = document.createElement("select");
 
     [
       "Order received",
@@ -1496,21 +1786,21 @@ function renderAdmin() {
       "Out for delivery",
       "Delivered",
       "Cancelled"
-    ].forEach(v => {
-      const op = document.createElement("option");
-      op.value = v;
-      op.textContent = v;
-      statusSelect.append(op);
+    ].forEach(value => {
+      const option = document.createElement("option");
+      option.value = value;
+      option.textContent = value;
+      status.append(option);
     });
 
-    statusSelect.value = order.status;
+    status.value = order.status;
 
-    statusSelect.onchange = () =>
-      updateOrder(order.ref,"status",statusSelect.value);
+    status.onchange = () =>
+      updateOrder(order.ref,"status",status.value);
 
-    status.append(statusSelect);
+    cells[4].append(status);
 
-    [orderCell,customer,items,pay,status].forEach(td => {
+    cells.forEach(td => {
       td.style.whiteSpace = "pre-line";
       tr.append(td);
     });
@@ -1520,10 +1810,8 @@ function renderAdmin() {
 }
 
 function updateOrder(ref,key,value) {
-
   const orders = getOrders();
-
-  const order = orders.find(o => o.ref === ref);
+  const order = orders.find(item => item.ref === ref);
 
   if(!order) return;
 
@@ -1534,7 +1822,6 @@ function updateOrder(ref,key,value) {
 }
 
 function exportOrders() {
-
   const orders = getOrders();
 
   if(!orders.length) {
@@ -1550,31 +1837,33 @@ function exportOrders() {
     "Order type",
     "Area",
     "Items",
-    "Subtotal",
-    "Delivery fee",
-    "Total",
+    "Estimated total min",
+    "Estimated total max",
     "Payment status",
     "Order status"
   ]];
 
-  orders.forEach(o => rows.push([
-    o.ref,
-    o.createdAt,
-    o.name,
-    o.phone,
-    o.type,
-    o.area,
-    o.items.map(i => `${i.name} x${i.quantity}`).join("; "),
-    o.subtotal,
-    o.deliveryFee,
-    o.total,
-    o.paymentStatus,
-    o.status
-  ]));
+  orders.forEach(order => {
+    rows.push([
+      order.ref,
+      order.createdAt,
+      order.name,
+      order.phone,
+      order.type,
+      order.area,
+      order.items.map(item =>
+        `${item.name} x${item.quantity}`
+      ).join("; "),
+      order.totalMin,
+      order.totalMax,
+      order.paymentStatus,
+      order.status
+    ]);
+  });
 
   const csv = rows.map(row =>
-    row.map(v =>
-      '"' + String(v ?? "").replace(/"/g,'""') + '"'
+    row.map(value =>
+      '"' + String(value ?? "").replace(/"/g,'""') + '"'
     ).join(",")
   ).join("\n");
 
@@ -1583,18 +1872,20 @@ function exportOrders() {
     {type:"text/csv;charset=utf-8;"}
   );
 
+  const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
 
-  link.href = URL.createObjectURL(blob);
+  link.href = url;
   link.download = "blessed-hands-orders.csv";
   link.click();
 
-  URL.revokeObjectURL(link.href);
+  URL.revokeObjectURL(url);
 }
 
 document.getElementById("year").textContent =
   new Date().getFullYear();
 
+renderProducts();
 updateCart();
 
 if(location.hash === "#admin") {
