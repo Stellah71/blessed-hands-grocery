@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Blessed Hands Groceries in Malaa — fresh vegetables, fruits and everyday groceries with local delivery.">
+<meta name="description" content="Blessed Hands Grocery in Malaa — fresh vegetables, fruits and everyday groceries with local delivery.">
 <meta name="theme-color" content="#17482f">
-<title>Blessed Hands Groceries | Fresh Produce in Malaa</title>
+<title>Blessed Hands Grocery | Fresh Produce in Malaa</title>
 
 <style>
 :root {
@@ -19,6 +19,7 @@
   --line:#e3eae2;
   --shadow:0 12px 35px #173d2510;
 }
+
 * {box-sizing:border-box}
 html {scroll-behavior:smooth}
 body {
@@ -27,9 +28,11 @@ body {
   background:var(--cream);
   color:var(--text);
 }
+
 button,input,select,textarea {font:inherit}
 button {cursor:pointer}
 a {color:inherit}
+
 .topbar {
   background:var(--dark);
   color:#fff;
@@ -37,6 +40,7 @@ a {color:inherit}
   padding:10px;
   font-size:13px;
 }
+
 header {
   background:#fff;
   position:sticky;
@@ -44,6 +48,7 @@ header {
   z-index:20;
   box-shadow:0 2px 12px #0000000c;
 }
+
 nav {
   max-width:1180px;
   margin:auto;
@@ -53,20 +58,28 @@ nav {
   justify-content:space-between;
   gap:16px;
 }
+
 .logo {
   font-size:19px;
   font-weight:800;
   color:var(--green);
   text-decoration:none;
 }
-.navlinks {display:flex;gap:18px;flex-wrap:wrap}
+
+.navlinks {
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
 .navlinks a {
   text-decoration:none;
   font-size:14px;
   font-weight:bold;
 }
+
 .navlinks a:hover {color:var(--green)}
-.nav-actions {display:flex;gap:8px;align-items:center}
+
 .btn {
   border:0;
   border-radius:25px;
@@ -78,21 +91,37 @@ nav {
   gap:7px;
   text-decoration:none;
 }
-.btn-primary {background:var(--green);color:#fff}
+
+.btn-primary {
+  background:var(--green);
+  color:#fff;
+}
+
 .btn-primary:hover {background:var(--dark)}
+
 .btn-outline {
   background:#fff;
   border:1px solid #cadacb;
   color:var(--green);
 }
-.btn-soft {background:var(--light);color:var(--green)}
-.btn-small {padding:8px 12px;font-size:13px}
+
+.btn-soft {
+  background:var(--light);
+  color:var(--green);
+}
+
+.btn-small {
+  padding:9px 12px;
+  font-size:12px;
+}
+
 .container {
   max-width:1180px;
   margin:auto;
   padding-left:22px;
   padding-right:22px;
 }
+
 .hero {
   padding-top:55px;
   padding-bottom:45px;
@@ -101,6 +130,7 @@ nav {
   align-items:center;
   gap:38px;
 }
+
 .tag {
   display:inline-block;
   background:var(--light);
@@ -110,40 +140,48 @@ nav {
   font-size:12px;
   font-weight:bold;
 }
+
 .hero h1 {
   font-size:clamp(38px,5vw,62px);
   line-height:1.05;
   margin:20px 0;
 }
+
 .hero h1 span {color:var(--green)}
+
 .hero p {
   color:var(--muted);
   line-height:1.8;
   max-width:520px;
 }
+
 .hero-photo {
   height:390px;
   border-radius:26px;
   overflow:hidden;
   background:#e6eee3;
 }
+
 .hero-photo img {
   width:100%;
   height:100%;
   object-fit:cover;
 }
+
 .hero-actions {
   display:flex;
   gap:12px;
   flex-wrap:wrap;
   margin-top:25px;
 }
+
 .trust-strip {
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:12px;
   padding-bottom:24px;
 }
+
 .trust-item {
   background:#fff;
   border:1px solid var(--line);
@@ -153,12 +191,18 @@ nav {
   font-weight:bold;
   font-size:14px;
 }
+
 .trust-item span {
   display:block;
   font-size:24px;
   margin-bottom:5px;
 }
-.section {padding-top:36px;padding-bottom:36px}
+
+.section {
+  padding-top:36px;
+  padding-bottom:36px;
+}
+
 .section-head {
   display:flex;
   justify-content:space-between;
@@ -166,14 +210,24 @@ nav {
   gap:15px;
   margin-bottom:22px;
 }
-.section-head h2 {font-size:30px;margin:0 0 7px}
-.section-head p {margin:0;color:var(--muted)}
+
+.section-head h2 {
+  font-size:30px;
+  margin:0 0 7px;
+}
+
+.section-head p {
+  margin:0;
+  color:var(--muted);
+}
+
 .category-tabs {
   display:flex;
   gap:8px;
   flex-wrap:wrap;
   margin-bottom:18px;
 }
+
 .category-tabs button {
   border:1px solid #cadacb;
   background:#fff;
@@ -183,16 +237,19 @@ nav {
   font-size:13px;
   font-weight:bold;
 }
+
 .category-tabs button.active {
   background:var(--green);
   color:#fff;
   border-color:var(--green);
 }
+
 .products {
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:18px;
 }
+
 .product {
   background:#fff;
   border:1px solid var(--line);
@@ -200,11 +257,13 @@ nav {
   overflow:hidden;
   box-shadow:var(--shadow);
 }
+
 .product-image {
   height:175px;
   background:var(--light);
   overflow:hidden;
 }
+
 .product-image img {
   width:100%;
   height:100%;
@@ -212,49 +271,65 @@ nav {
   display:block;
   transition:transform .3s;
 }
+
 .product:hover img {transform:scale(1.05)}
+
 .product-details {padding:16px}
+
 .product h3 {margin:0 0 7px}
+
 .product p {
   font-size:13px;
   color:var(--muted);
   min-height:16px;
 }
-.price {font-weight:bold;color:var(--green)}
+
+.price {
+  font-weight:bold;
+  color:var(--green);
+  display:block;
+  margin-bottom:10px;
+}
+
+.product-bottom {margin-top:12px}
+
 .price-select {
   width:100%;
-  padding:10px;
-  border:1px solid #cadacb;
+  padding:9px;
+  border:1px solid #dce5dc;
   border-radius:9px;
   background:#fff;
-  color:var(--green);
-  font-weight:bold;
-  margin-top:8px;
+  color:var(--text);
+  margin-bottom:10px;
+  font-size:13px;
 }
-.product-bottom {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:8px;
-  flex-wrap:wrap;
-  margin-top:14px;
+
+.add-button {
+  width:100%;
+  border-radius:22px;
+  padding:11px 8px;
 }
+
 .feature-grid {
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:16px;
 }
+
 .feature,.location-card {
   background:#fff;
   padding:22px;
   border:1px solid var(--line);
   border-radius:17px;
 }
+
 .feature-icon {font-size:28px}
+
 .feature p,.location-card p {
   color:var(--muted);
   line-height:1.6;
 }
+
 .order-layout {
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -263,20 +338,30 @@ nav {
   border-radius:24px;
   padding:22px;
 }
+
 .order-intro {padding:18px}
+
 .order-intro h2 {font-size:30px}
+
 .order-intro p {
   color:var(--muted);
   line-height:1.7;
 }
+
 .panel {
   background:#fff;
   border-radius:18px;
   padding:22px;
   box-shadow:var(--shadow);
 }
+
 .panel h3 {margin-top:0}
-.cart-empty {color:var(--muted);padding:14px 0}
+
+.cart-empty {
+  color:var(--muted);
+  padding:14px 0;
+}
+
 .cart-row {
   display:flex;
   justify-content:space-between;
@@ -286,17 +371,20 @@ nav {
   padding:11px 0;
   font-size:14px;
 }
+
 .cart-row small {
   display:block;
   color:var(--muted);
   margin-top:4px;
 }
+
 .qty {
   display:flex;
   align-items:center;
   gap:5px;
   white-space:nowrap;
 }
+
 .qty button {
   border:0;
   background:var(--light);
@@ -305,6 +393,7 @@ nav {
   padding:5px 9px;
   font-weight:bold;
 }
+
 .summary-line {
   display:flex;
   justify-content:space-between;
@@ -312,19 +401,23 @@ nav {
   padding:9px 0;
   font-size:14px;
 }
+
 .summary-total {
   border-top:1px solid var(--line);
   font-size:17px;
   font-weight:bold;
   padding-top:14px;
 }
+
 .field {margin-top:13px}
+
 .field label {
   display:block;
   font-size:13px;
   font-weight:bold;
   margin-bottom:6px;
 }
+
 .field input,.field select,.field textarea {
   width:100%;
   padding:12px;
@@ -333,7 +426,12 @@ nav {
   background:#fff;
   color:var(--text);
 }
-.field textarea {min-height:75px;resize:vertical}
+
+.field textarea {
+  min-height:75px;
+  resize:vertical;
+}
+
 .payment-box {
   margin-top:17px;
   padding:16px;
@@ -341,35 +439,50 @@ nav {
   border:1px solid #dce9dc;
   border-radius:12px;
 }
-.payment-box h4 {margin:0 0 8px;color:var(--dark)}
-.payment-box p {font-size:13px;line-height:1.6;margin:7px 0}
+
+.payment-box h4 {
+  margin:0 0 8px;
+  color:var(--dark);
+}
+
+.payment-box p {
+  font-size:13px;
+  line-height:1.6;
+  margin:7px 0;
+}
+
 .payment-number {
   font-size:23px;
   font-weight:800;
   color:var(--green);
 }
+
 .note {
   font-size:12px;
   color:var(--muted);
   line-height:1.6;
 }
+
 .delivery-rates {
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:12px;
 }
+
 .rate {
   background:#fff;
   border:1px solid var(--line);
   padding:17px;
   border-radius:14px;
 }
+
 .rate strong {
   display:block;
   color:var(--green);
   font-size:20px;
   margin-top:6px;
 }
+
 .tracking-box {
   max-width:680px;
   background:#fff;
@@ -378,6 +491,7 @@ nav {
   padding:22px;
   box-shadow:var(--shadow);
 }
+
 .tracking-result {
   margin-top:16px;
   padding:16px;
@@ -385,6 +499,7 @@ nav {
   background:var(--light);
   display:none;
 }
+
 .status-pill {
   display:inline-block;
   background:#eaf4e9;
@@ -394,32 +509,40 @@ nav {
   font-size:12px;
   font-weight:bold;
 }
+
 .admin-area {display:none}
 .admin-area.active {display:block}
+
 .admin-table-wrap {overflow-x:auto}
+
 .admin-table {
   width:100%;
   border-collapse:collapse;
   font-size:13px;
 }
+
 .admin-table th,.admin-table td {
   text-align:left;
   padding:11px;
   border-bottom:1px solid var(--line);
   vertical-align:top;
 }
+
 .admin-table th {background:#f7faf6}
+
 .admin-table select {
   padding:7px;
   border:1px solid var(--line);
   border-radius:7px;
 }
+
 .admin-tools {
   display:flex;
   gap:10px;
   flex-wrap:wrap;
   margin-bottom:16px;
 }
+
 .admin-notice {
   background:#fff8e8;
   border:1px solid #f1dfad;
@@ -429,19 +552,26 @@ nav {
   line-height:1.6;
   margin-bottom:16px;
 }
+
 .terms {
   background:#fff;
   border:1px solid var(--line);
   padding:22px;
   border-radius:17px;
 }
-.terms h3 {font-size:16px;margin:18px 0 6px}
+
+.terms h3 {
+  font-size:16px;
+  margin:18px 0 6px;
+}
+
 .terms p {
   font-size:14px;
   line-height:1.7;
   color:var(--muted);
   margin:6px 0;
 }
+
 .accept-terms {
   display:flex!important;
   align-items:flex-start;
@@ -449,13 +579,19 @@ nav {
   font-weight:normal!important;
   line-height:1.5;
 }
-.accept-terms input {width:auto!important;margin-top:3px}
+
+.accept-terms input {
+  width:auto!important;
+  margin-top:3px;
+}
+
 footer {
   background:var(--dark);
   color:#fff;
   padding:35px 22px;
   margin-top:40px;
 }
+
 .footer-content {
   max-width:1135px;
   margin:auto;
@@ -464,12 +600,15 @@ footer {
   flex-wrap:wrap;
   gap:20px;
 }
+
 footer p {color:#c9dfce}
+
 .admin-link {
   font-size:12px;
   color:#d4e5d8;
   text-decoration:underline;
 }
+
 .hidden {display:none!important}
 
 @media(max-width:850px) {
@@ -477,16 +616,24 @@ footer p {color:#c9dfce}
   .products {grid-template-columns:repeat(2,1fr)}
   .navlinks {display:none}
   .hero-photo {height:290px}
-  .feature-grid,.trust-strip,.delivery-rates {grid-template-columns:1fr}
+  .feature-grid {grid-template-columns:1fr}
+  .trust-strip {grid-template-columns:1fr}
+  .delivery-rates {grid-template-columns:1fr}
 }
+
 @media(max-width:480px) {
   .products {gap:10px}
   .product-image {height:125px}
   .product-details {padding:11px}
-  .product-bottom {align-items:flex-start}
-  .section-head {align-items:flex-start;flex-direction:column}
+  .section-head {
+    align-items:flex-start;
+    flex-direction:column;
+  }
   .logo {font-size:16px}
-  .nav-actions .btn {padding:10px 12px;font-size:12px}
+  .nav-actions .btn {
+    padding:10px 12px;
+    font-size:12px;
+  }
 }
 </style>
 </head>
@@ -499,7 +646,7 @@ footer p {color:#c9dfce}
 
 <header>
 <nav>
-  <a class="logo" href="#home">🧺 Blessed Hands Groceries</a>
+  <a class="logo" href="#home">🧺 Blessed Hands Grocery</a>
 
   <div class="navlinks">
     <a href="#home">Home</a>
@@ -512,7 +659,7 @@ footer p {color:#c9dfce}
 
   <div class="nav-actions">
     <button class="btn btn-primary" onclick="goToOrder()">
-      Basket (<span id="cart-count">0</span>)
+      🛒 Basket (<span id="cart-count">0</span>)
     </button>
   </div>
 </nav>
@@ -522,13 +669,15 @@ footer p {color:#c9dfce}
 
 <section class="hero container" id="home">
   <div>
-    <span class="tag">WELCOME TO BLESSED HANDS GROCERIES</span>
+    <span class="tag">WELCOME TO BLESSED HANDS GROCERY</span>
     <h1>Fresh groceries.<br><span>Happy homes.</span></h1>
+
     <p>
       Your trusted neighbourhood grocery shop in Malaa.
       Shop fresh vegetables, fruits and everyday essentials at fair prices.
       Order online for convenient delivery or collect from our store.
     </p>
+
     <div class="hero-actions">
       <a class="btn btn-primary" href="#shop">Shop Now</a>
       <a class="btn btn-outline" href="#location">Find Our Store</a>
@@ -552,7 +701,7 @@ footer p {color:#c9dfce}
   <div class="section-head">
     <div>
       <h2>Shop Fresh Groceries</h2>
-      <p>Choose your preferred price where a product has three price options.</p>
+      <p>Browse our products and add your favourites to your basket.</p>
     </div>
   </div>
 
@@ -562,13 +711,12 @@ footer p {color:#c9dfce}
     <button data-category="Herbs & Spices">Herbs & spices</button>
     <button data-category="Fruits">Fruits</button>
     <button data-category="Greens">Greens</button>
-    <button data-category="Other Essentials">Other essentials</button>
   </div>
 
   <div class="products" id="product-grid"></div>
 
   <p class="note">
-    Select Budget, Middle or Premium for products with price ranges.
+    Choose your preferred price option where available.
     Product images should be saved as JPG files in the same folder as this HTML file.
   </p>
 </section>
@@ -587,11 +735,13 @@ footer p {color:#c9dfce}
       <h3>Fresh Produce</h3>
       <p>Shop your everyday grocery essentials at fair prices.</p>
     </div>
+
     <div class="feature">
       <div class="feature-icon">🛵</div>
       <h3>Home Delivery</h3>
       <p>We serve Malaa, Kware, Joska and nearby areas.</p>
     </div>
+
     <div class="feature">
       <div class="feature-icon">🛍️</div>
       <h3>Store Collection</h3>
@@ -617,7 +767,7 @@ footer p {color:#c9dfce}
 
 <section class="section container" id="location">
   <div class="location-card">
-    <h3>📍 Blessed Hands Groceries</h3>
+    <h3>📍 Blessed Hands Grocery</h3>
     <p><strong>Location:</strong> Malaa, 300 metres behind Waecon Supermarket.</p>
     <p><strong>WhatsApp:</strong> 0794 725 287</p>
     <p><strong>Services:</strong> Delivery and store collection.</p>
@@ -630,19 +780,22 @@ footer p {color:#c9dfce}
   <div class="order-intro">
     <span class="tag">EASY ONLINE ORDERING</span>
     <h2>Place Your Grocery Order</h2>
+
     <p>
       Add products to your basket, select delivery or collection,
       and send your order to us on WhatsApp.
     </p>
+
     <p>
-      We will confirm product availability and any prices marked
-      “Price on request” before you pay.
+      We will confirm product availability and your final order amount
+      before you pay.
     </p>
+
     <p><strong>Store collection:</strong> No delivery fee.</p>
   </div>
 
   <div class="panel">
-    <h3>🛒 Your Basket</h3>
+    <h3>🛒 Your Shopping Basket</h3>
 
     <div id="cart-items" class="cart-empty">
       Your basket is empty.
@@ -711,6 +864,7 @@ footer p {color:#c9dfce}
         Open M-Pesa → Pochi la Biashara → Send Money.
         Enter the number and the confirmed amount.
       </p>
+
       <p>
         <strong>Keep your M-Pesa confirmation SMS.</strong>
         You can send your transaction confirmation to us on WhatsApp.
@@ -729,13 +883,12 @@ footer p {color:#c9dfce}
     </div>
 
     <button class="btn btn-primary" style="width:100%;margin-top:16px" onclick="placeOrder()">
-      Place Order on WhatsApp
+      🛒 Place Order on WhatsApp
     </button>
 
     <p class="note">
-      Estimated totals may change if your basket contains products
-      whose prices need confirmation. We will confirm the final amount
-      before payment.
+      Estimated totals may change if product availability or prices need confirmation.
+      We will confirm the final amount before payment.
     </p>
   </div>
 </div>
@@ -750,6 +903,7 @@ footer p {color:#c9dfce}
   </div>
 
   <div class="terms">
+
     <h3>1. No returns for change of mind</h3>
     <p>
       All sales are final for change-of-mind requests.
@@ -770,8 +924,6 @@ footer p {color:#c9dfce}
     <h3>3. Product prices and availability</h3>
     <p>
       Prices and availability are subject to confirmation.
-      Products marked “Price on request” will be priced and
-      confirmed with you before payment.
       Please do not pay until we confirm your final order total.
     </p>
 
@@ -802,6 +954,7 @@ footer p {color:#c9dfce}
       For questions, order changes or complaints, contact
       Blessed Hands Grocery on WhatsApp at 0794 725 287.
     </p>
+
   </div>
 </section>
 
@@ -840,6 +993,7 @@ footer p {color:#c9dfce}
       <h2>Store Admin Dashboard</h2>
       <p>Review orders and update payment and fulfilment status.</p>
     </div>
+
     <button class="btn btn-outline btn-small" onclick="closeAdmin()">
       Close dashboard
     </button>
@@ -879,16 +1033,18 @@ footer p {color:#c9dfce}
 <footer>
   <div class="footer-content">
     <div>
-      <h3>🧺 Blessed Hands Groceries</h3>
+      <h3>🧺 Blessed Hands Grocery</h3>
       <p>Fresh groceries. Fair prices. Happy homes.</p>
     </div>
+
     <div>
       <h3>Contact Us</h3>
       <p>WhatsApp: 0794 725 287</p>
       <p>Malaa, Kenya</p>
     </div>
+
     <div>
-      <p>© <span id="year"></span> Blessed Hands Groceries</p>
+      <p>© <span id="year"></span> Blessed Hands Grocery</p>
       <p>Thank you for shopping with us!</p>
       <a class="admin-link" href="#admin" onclick="openAdmin()">Store administration</a>
     </div>
@@ -905,11 +1061,7 @@ const DELIVERY_FEES = {
   Joska:170
 };
 
-// EDIT PRODUCT PRICES IN THIS LIST.
-// For a fixed price, use the same min and max.
-// For three customer price choices, enter the lowest and highest prices.
-// For unconfirmed prices, use min:null,max:null.
-
+// PRODUCT LIST
 const products = [
   {
     name:"Potatoes",
@@ -924,8 +1076,8 @@ const products = [
     name:"Onions",
     category:"Vegetables",
     unit:"kg",
-    min:80,
-    max:80,
+    min:75,
+    max:75,
     image:"onions.jpg",
     description:"Fresh onions"
   },
@@ -933,8 +1085,8 @@ const products = [
     name:"Tomatoes",
     category:"Vegetables",
     unit:"kg",
-    min:100,
-    max:100,
+    min:60,
+    max:60,
     image:"tomatoes.jpg",
     description:"Fresh tomatoes"
   },
@@ -942,7 +1094,7 @@ const products = [
     name:"Cabbage",
     category:"Vegetables",
     unit:"piece",
-    min:80,
+    min:90,
     max:100,
     image:"cabbages.jpg",
     description:"Fresh cabbage"
@@ -960,8 +1112,8 @@ const products = [
     name:"Butternut",
     category:"Vegetables",
     unit:"piece",
-    min:80,
-    max:200,
+    min:50,
+    max:150,
     image:"butternut.jpg",
     description:"Fresh butternut squash"
   },
@@ -1063,6 +1215,49 @@ const products = [
     max:50,
     image:"avocados.jpg",
     description:"Fresh avocados"
+  },
+
+  // NEW PRODUCTS
+
+  {
+    name:"Pineapple",
+    category:"Fruits",
+    unit:"piece",
+    min:60,
+    max:100,
+    image:"pineapple.jpg",
+    description:"Fresh pineapple"
+  },
+  {
+    name:"Minji",
+    category:"Vegetables",
+    unit:"kasuku",
+    min:80,
+    max:150,
+    priceChoices:[
+      {label:"Small kasuku",price:80},
+      {label:"Big kasuku",price:150}
+    ],
+    image:"minji.jpg",
+    description:"Fresh green peas"
+  },
+  {
+    name:"Spinach",
+    category:"Greens",
+    unit:"bunch",
+    min:20,
+    max:20,
+    image:"spinach.jpg",
+    description:"Fresh spinach"
+  },
+  {
+    name:"Sukuma Wiki",
+    category:"Greens",
+    unit:"bunch",
+    min:20,
+    max:20,
+    image:"sukuma.jpg",
+    description:"Fresh sukuma wiki"
   }
 ];
 
@@ -1074,10 +1269,6 @@ function money(amount) {
 }
 
 function productPrice(product) {
-  if(product.min === null || product.max === null) {
-    return "Price on request";
-  }
-
   if(product.min === product.max) {
     return `${money(product.min)} / ${product.unit}`;
   }
@@ -1085,15 +1276,24 @@ function productPrice(product) {
   return `${money(product.min)}–${money(product.max)} / ${product.unit}`;
 }
 
-// Returns exactly three distinct prices for ranged products.
+// PRICE OPTIONS FOR PRODUCTS WITH PRICE RANGES
 function getPriceOptions(product) {
-  if(product.min === null || product.max === null || product.min === product.max) {
+  if(product.priceChoices) {
+    return product.priceChoices;
+  }
+
+  if(product.min === null || product.max === null ||
+     product.min === product.max) {
     return [];
   }
 
   const middle = Math.round((product.min + product.max) / 2);
 
-  return [...new Set([product.min,middle,product.max])];
+  return [...new Set([product.min,middle,product.max])]
+    .map((price,index) => ({
+      label:["Budget option","Middle option","Premium option"][index],
+      price:price
+    }));
 }
 
 function renderProducts() {
@@ -1131,48 +1331,32 @@ function renderProducts() {
     const desc = document.createElement("p");
     desc.textContent = product.description + " • Sold per " + product.unit;
 
-    const bottom = document.createElement("div");
-    bottom.className = "product-bottom";
-
-    const priceArea = document.createElement("div");
-    priceArea.style.flex = "1";
-    priceArea.style.minWidth = "110px";
-
     const price = document.createElement("span");
     price.className = "price";
+    price.textContent = productPrice(product);
+
+    const bottom = document.createElement("div");
+    bottom.className = "product-bottom";
 
     const options = getPriceOptions(product);
     let priceSelect = null;
 
-    if(options.length) {
-      price.textContent = "Choose your price:";
-
+    if(options.length > 0) {
       priceSelect = document.createElement("select");
       priceSelect.className = "price-select";
       priceSelect.setAttribute("aria-label","Choose price for " + product.name);
 
-      const labels = [
-        "Budget option",
-        "Middle option",
-        "Premium option"
-      ];
-
-      options.forEach((amount,optionIndex) => {
+      options.forEach(choice => {
         const option = document.createElement("option");
-        option.value = amount;
-        option.textContent = labels[optionIndex] + " — " + money(amount);
+        option.value = choice.price;
+        option.textContent = choice.label + " — " + money(choice.price);
         priceSelect.append(option);
       });
-
-      priceArea.append(price,priceSelect);
-    } else {
-      price.textContent = productPrice(product);
-      priceArea.append(price);
     }
 
     const btn = document.createElement("button");
-    btn.className = "btn btn-soft btn-small";
-    btn.textContent = "Add +";
+    btn.className = "btn btn-soft btn-small add-button";
+    btn.textContent = "🛒 Add to Basket";
 
     btn.onclick = () => {
       const selectedPrice = priceSelect
@@ -1182,8 +1366,10 @@ function renderProducts() {
       addToCart(product,selectedPrice);
     };
 
-    bottom.append(priceArea,btn);
-    details.append(title,desc,bottom);
+    if(priceSelect) bottom.append(priceSelect);
+    bottom.append(btn);
+
+    details.append(title,desc,price,bottom);
     card.append(photo,details);
     grid.append(card);
   });
@@ -1202,17 +1388,14 @@ document.getElementById("category-tabs").addEventListener("click",event => {
   renderProducts();
 });
 
-// Adds the customer's selected price to the basket.
-// Different price choices for the same product remain separate basket lines.
+// ADD SELECTED PRODUCT AND PRICE TO BASKET
 function addToCart(product,selectedPrice) {
-  const hasPrice = selectedPrice !== null && selectedPrice !== undefined;
-  const chosenMin = hasPrice ? selectedPrice : product.min;
-  const chosenMax = hasPrice ? selectedPrice : product.max;
+  const chosenPrice = selectedPrice === null ? null : Number(selectedPrice);
 
   const existing = cart.find(item =>
     item.name === product.name &&
-    item.min === chosenMin &&
-    item.max === chosenMax
+    item.min === chosenPrice &&
+    item.max === chosenPrice
   );
 
   if(existing) {
@@ -1221,13 +1404,16 @@ function addToCart(product,selectedPrice) {
     cart.push({
       name:product.name,
       unit:product.unit,
-      min:chosenMin,
-      max:chosenMax,
+      min:chosenPrice,
+      max:chosenPrice,
       quantity:1
     });
   }
 
   updateCart();
+
+  const count = document.getElementById("cart-count");
+  count.style.fontWeight = "bold";
 }
 
 function changeQuantity(index,amount) {
@@ -1284,6 +1470,9 @@ function updateCart() {
 
   if(!cart.length) {
     container.textContent = "Your basket is empty.";
+    container.className = "cart-empty";
+  } else {
+    container.className = "";
   }
 
   cart.forEach((item,index) => {
@@ -1299,12 +1488,10 @@ function updateCart() {
 
     if(item.min === null || item.max === null) {
       detail.textContent = "Price to be confirmed";
-    } else if(item.min !== item.max) {
-      detail.textContent = `${money(item.min)}–${money(item.max)} each`;
     } else {
       detail.textContent =
-        money(item.min) + " each • Total: " +
-        money(item.min * item.quantity);
+        money(item.min) + " each • " +
+        money(item.min * item.quantity) + " total";
     }
 
     info.append(title,detail);
@@ -1340,9 +1527,7 @@ function updateCart() {
   document.getElementById("products-total").textContent =
     totals.unpriced
       ? "Price to be confirmed"
-      : totals.hasRange
-        ? `${money(totals.min)} – ${money(totals.max)}`
-        : money(totals.min);
+      : money(totals.min);
 
   document.getElementById("delivery-fee-row").style.display =
     delivery ? "flex" : "none";
@@ -1353,9 +1538,7 @@ function updateCart() {
   document.getElementById("cart-total").textContent =
     totals.unpriced
       ? "Confirming product prices"
-      : totals.hasRange
-        ? `${money(totals.min + (fee || 0))} – ${money(totals.max + (fee || 0))}`
-        : money(totals.min + (fee || 0));
+      : money(totals.min + (fee || 0));
 }
 
 function toggleDelivery() {
@@ -1473,30 +1656,19 @@ function placeOrder() {
   saveOrders(orders);
 
   const itemLines = order.items.map(item => {
-    let price;
-
-    if(item.min === null || item.max === null) {
-      price = "Price to be confirmed";
-    } else if(item.min === item.max) {
-      price =
-        money(item.min) + " each; line total: " +
-        money(item.min * item.quantity);
-    } else {
-      price =
-        `${money(item.min * item.quantity)}–${money(item.max * item.quantity)} (range)`;
-    }
+    const price = item.min === null
+      ? "Price to be confirmed"
+      : money(item.min * item.quantity);
 
     return `- ${item.name}: ${item.quantity} ${item.unit} — ${price}`;
   }).join("\n");
 
   const totalText = totals.unpriced
     ? "Final amount to be confirmed"
-    : totals.hasRange
-      ? `${money(order.totalMin)} – ${money(order.totalMax)}`
-      : money(order.totalMin);
+    : money(order.totalMin);
 
   const message =
-`Hello Blessed Hands Groceries!
+`Hello Blessed Hands Grocery!
 
 I would like to place an order.
 
@@ -1515,6 +1687,7 @@ Delivery fee: ${money(fee)}`
 MY ORDER:
 ${itemLines}
 
+Products subtotal: ${money(totals.min)}
 Estimated total: ${totalText}
 
 Payment method: M-Pesa Pochi la Biashara
@@ -1580,13 +1753,7 @@ function trackOrder() {
   const amount = document.createElement("p");
   amount.textContent =
     "Estimated total: " +
-    (
-      order.unpriced
-        ? "To be confirmed"
-        : order.hasRange
-          ? `${money(order.totalMin)} – ${money(order.totalMax)}`
-          : money(order.totalMin)
-    );
+    (order.unpriced ? "To be confirmed" : money(order.totalMin));
 
   const date = document.createElement("p");
   date.textContent =
@@ -1653,22 +1820,9 @@ function renderAdmin() {
       (order.area ? " — " + order.area : "");
 
     cells[2].textContent =
-      order.items.map(item => {
-        const linePrice =
-          item.min === null
-            ? "Price to confirm"
-            : money(item.min) + " each";
-
-        return item.name + " × " + item.quantity + " — " + linePrice;
-      }).join("\n") +
-      "\nTOTAL: " +
-      (
-        order.unpriced
-          ? "Price to confirm"
-          : order.hasRange
-            ? `${money(order.totalMin)} – ${money(order.totalMax)}`
-            : money(order.totalMin)
-      );
+      order.items.map(item => item.name + " × " + item.quantity).join(", ") +
+      "\n" +
+      (order.unpriced ? "Price to confirm" : money(order.totalMin));
 
     const pay = document.createElement("select");
 
@@ -1728,6 +1882,7 @@ function updateOrder(ref,key,value) {
   if(!order) return;
 
   order[key] = value;
+
   saveOrders(orders);
   renderAdmin();
 }
@@ -1747,9 +1902,8 @@ function exportOrders() {
     "Phone",
     "Order type",
     "Area",
-    "Items and selected prices",
-    "Estimated total min",
-    "Estimated total max",
+    "Items",
+    "Estimated total",
     "Payment status",
     "Order status"
   ]];
@@ -1763,10 +1917,9 @@ function exportOrders() {
       order.type,
       order.area,
       order.items.map(item =>
-        `${item.name} x${item.quantity} at KSh ${item.min ?? "To confirm"} each`
+        `${item.name} x${item.quantity}`
       ).join("; "),
       order.totalMin,
-      order.totalMax,
       order.paymentStatus,
       order.status
     ]);
